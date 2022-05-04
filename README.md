@@ -4,9 +4,13 @@ This is a repo to share the work Giacomo and Baptiste are doing in relation to c
 
 ## What's the value?
 
-1. **Why embedded analytics are important?**
+### Introduction to Web Integration
+Unlike other Business Intelligence and Analytics Platforms on the market that start out as BI platforms and become endpoints within a data project, Qlik wants to ensure that what
+is created inside the *Qlik Active Intelligence Platform*, does not remain bounded and accessible only within it but can be embedded
+in a single platform entry-point which corporate decision-making processes take place.
 
-2. **What is a mashup and what are common use cases?**
+
+### What is a mashup and what are common use cases?
 
 ## How to do it?
 
