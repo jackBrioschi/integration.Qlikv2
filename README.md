@@ -9,6 +9,7 @@ Unlike other Business Intelligence and Analytics Platforms on the market that st
 is created inside the *Qlik Active Intelligence Platform*, does not remain bounded and accessible only within it but can be embedded
 in a single platform entry-point which corporate decision-making processes take place.
 
+Hence, if we create a data model together with data visualization layer in Qlik, this by default will be accessible on the dedicated Qlik Sense SaaS tenant but can also be embedded within portals, business systems or services software that an ISV delivers to its end customers.
 
 ### What is a mashup and what are common use cases?
 
