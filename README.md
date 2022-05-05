@@ -2,7 +2,8 @@
 This is a repo to share the work Giacomo and Baptiste are doing in relation to create a SaaS version of integration.Qlik.com
 
 
-## What's the value?
+## What's the value of Embedded Analytics?
+*Embedded analytics* seamlessly integrate analytic capabilities and content into business applications, products, websites or portals. It lets users quickly access relevant data and insights in their daily workflows without slowing down and switching to use a separate analytics application. This makes it easier for organizations to empower employees, customers, suppliers and partners with the information they need right where they work to answer questions, make better decisions and take action faster. Please visit (Qlik Embedded Analytics page)[https://www.qlik.com/us/bi/embedded-analytics]
 
 ### Introduction to Web Integration
 Unlike other Business Intelligence and Analytics Platforms on the market that start out as BI platforms and become endpoints within a data project, Qlik wants to ensure that what
