@@ -3,6 +3,8 @@ This is a repo to share the work Giacomo and Baptiste are doing in relation to c
 
 
 ## What's the value of Embedded Analytics?
+As data-driven decision making is becoming more and more a key part of organizations, having embedded analytics in the core applications that business people use on a regular basis becomes critical to being able to take full advantage from the data asset.
+
 *Embedded analytics* seamlessly integrate analytic capabilities and content into business applications, products, websites or portals. It lets users quickly access relevant data and insights in their daily workflows without slowing down and switching to use a separate analytics application. This makes it easier for organizations to empower employees, customers, suppliers and partners with the information they need right where they work to answer questions, make better decisions and take action faster. Please visit [Qlik Embedded Analytics](https://www.qlik.com/us/bi/embedded-analytics)
 
 ### Introduction to Web Integration
