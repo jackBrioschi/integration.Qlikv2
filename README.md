@@ -26,4 +26,35 @@ As for the analytics part, we offer different methods and levels of integration,
 
 Despite in this section we will focus on the Analytics part only, it is important to consider that **Augmented Intelligence** capabilities are increasingly available to improve and enhance the user's analytical capacity within the platform. These concern for example the *creation of intelligent alerts* or a virtual assistant that talks with the user in natural language. Qlik's API first approach permits to even integrate these additional functionalities into your solutions. [More detail in the section ...].
 
+## Embedding strategies
+As for the Embedded Analytics part, we basically offer two different types of embedding strategies, the embedding via Iframe and the embedding using one of the available JS libraries.
+Let's see them in details in the next sections.
+
+  ### Iframe integration
+  description
+   #### How does it work?
+   
+   ### When to use it/when not to use it?
+   
+  ### Javascript Integration
+  description
+   #### Nebula.js and Enigma.js libraries
+   description
+   ##### How does it work?
+   tbd
+   ##### When to use it/when not to use it?
+   
+   #### Capability APIs
+   description
+   ##### How does it work?
+   tbd
+   ##### When to use it/when not to use it? 
+   
+   
+  
+ 
+
+
+
+
 
