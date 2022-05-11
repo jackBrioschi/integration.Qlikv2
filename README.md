@@ -31,10 +31,19 @@ As for the Embedded Analytics part, we basically offer two different types of em
 Let's see them in details in the next sections.
 
   ### Iframe integration
-  description
+  The simplest and by far the most common method of embedding into your solutions analytics built in Qlik Sense SaaS is certainly through the use of an Iframe. An Iframe is generally used to show the content of a web resource, in our case Qlik Sense, within a frame of a web page/main portal.
+  
+
    #### How does it work?
    
-   ### When to use it/when not to use it?
+   #### When to use it/when not to use it?
+   PRO: when you need a quick fix. When Qlik Sense's look & feel meets your needs. Because? because there are still themes
+that can be applied to Qlik dashboards to completely customize their appearance and make them completely in line with what are the
+corporate color palette and corporate standards (white labeling of the platform) but obviously we cannot go to use style and JS to go to
+customize the style and native behavior of graphic objects by making them interact with our page.
+If you want to embed the self-service part, that is to give the user the possibility to create new sheets, or to embed an entire sheet of a
+application or the insight advisor to allow you to use the Qlik Cognitive Engine for guided data analysis through the use of insights, this
+It is the only way.
    
   ### Javascript Integration
   description
