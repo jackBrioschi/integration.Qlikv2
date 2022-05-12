@@ -91,13 +91,14 @@ There is currently no Dev-Hub in Qlik Cloud. However, here are some tips and too
 
 #### Embedded Active Intelligence 
 
-- Embedded Notes : Giacomo?
+- Embedded Notes : Giacomo? (Not public API)
 - Embedded Insight Advisor : 
 [How To](https://help.qlik.com/en-US/sense-developer/February2022/Subsystems/Mashups/Content/Sense_Mashups/Howtos/mashups-integrate-IA-chat.htm)
 - Embededd Alert : To dig ???
 
 #### Nebula.js and Enigma.js
 
+adding example
 Enigma.js and Nebula.js allows an advanced capabilities of integration
 - Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
 - Qlik nebula.js is an open source collection of JavaScript libraries, visualizations, and CLIs that help developers build and integrate visualizations into their own web app or build their own client extension.
