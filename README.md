@@ -67,7 +67,7 @@ Before performing any kind of integration via Iframe, **Content Security Policy 
 Every Qlik Sense SaaS tenant explicitly states in its CSP header that an iframe can only be displayed by “self” which is the Qlik Sense SaaS tenant itself. Unlike in some cases on Qlik Sense Client-Managed, the Qlik Sense SaaS tenant and your web app server are two separate entities, meaning Qlik's CSP policy blocks the access of objects in other domains for a security precaution. If content security policy is not configured ,the browser throws an error because it's unable to display the iframe. Please for more details regarding *Content Security Policy(CSP)* and how to properly configure it to correctly load an iframe from Qlik Sense Saas, visit [this page on qlik.dev](https://qlik.dev/tutorials/csp---what-is-it-and-how-to-use-it)
 
 ##### How to do it
- There are two different possibilities to embed Qlik Cloud content using Iframe: Embed an entire sheet or embed an existing visualization object. 
+ Once pre-requisites are met, there are two different possibilities to embed Qlik Cloud content using Iframe: Embed an entire sheet or embed an existing visualization object. 
  The APIs to be used are the same you've already used on the client-managed platform, i.e. [Single Integration APIs](https://qlik.dev/apis/javascript/single-integrations).
  
 You can then easily migrate from a Qlik Sense on Windows Iframe integration to Qlik Cloud by only changing the *hostName* and the *appId* inside the iFrame URL. 
