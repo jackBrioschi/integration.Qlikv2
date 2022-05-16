@@ -70,7 +70,7 @@ To start using this capability, simply head over to a sheet, right click a visua
  
 You can then easily migrate from a Qlik Sense on Windows Iframe integration to Qlik Cloud by only changing the *hostName* and the *appId* inside the iFrame URL. 
 *Do I need to change also sheetId and objects Id?* Well, if you migrated correctly the app into Qlik Sense SaaS, the ids of these objects should remain the same.
-If otherwise you need to embed new content (new visualizations or new sheets) via iFrame that didn't exist before inside the former Qlik app, please go to [this section](link to Jack github page) to see how to generate the correct Iframe URL to perform the integration.
+If otherwise you need to embed new content (new visualizations or new sheets) via iFrame that didn't exist before inside the former Qlik app, please go to [this section](https://github.com/jackBrioschi/integration.Qlikv2/tree/Jack) to see how to generate the correct Iframe URL to perform the integration.
 
   ###### Single Sheet
   * Just replace your old *hostName* (old Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*). 
