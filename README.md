@@ -66,3 +66,7 @@ To start using this capability, simply head over to a sheet, right click a visua
 
 ##### How to do it
 To start using this capability, simply head over to a sheet, right click a visualization, and choose "Embed chart" from the context menu.
+ <p align="center">
+  <img src="src/gif/Single Sheet Integration.gif" width="1000" title="Single Sheet Integration" align="center"/>
+ </p>
+
