@@ -93,3 +93,45 @@ If otherwise you need to embed new content (new visualizations or new sheets) vi
 
 
 ### Div-Tag Integration
+
+#### Introduction
+tbd
+
+#### Prerequisites
+tbd
+
+#### How to do it
+tbd
+
+#### Known Limitation
+tbd
+
+
+### On the fly
+
+#### Introduction
+tbd
+
+#### Prerequisites
+tbd
+
+#### How to do it
+tbd
+
+#### Known Limitation
+tbd
+
+
+### Data Only
+
+#### Introduction
+tbd
+
+#### Prerequisites
+tbd
+
+#### How to do it
+tbd
+
+#### Known Limitation
+tbd
