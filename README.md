@@ -1,69 +1,106 @@
-# integration.Qlikv2
-This is a repo to share the work Giacomo and Baptiste are doing in relation to create a SaaS version of integration.Qlik.com
+# Embedded Analytics Modernization : Moving fast to Qlik Cloud
 
+Embedded analytics seamlessly integrate analytic capabilities and content into business applications, products, websites or portals.
+It lets users quickly access relevant data and insights in their daily workflows without slowing down and switching to use a separate analytics application.
+Embedded analytics from Qlik Sense Client Manage site can easily be modernized by moving to Qlik Cloud Platform.
 
-## What's the value of Embedded Analytics?
-As data-driven decision making is becoming more and more a key part of organizations, having embedded analytics in the core applications that business people use on a regular basis becomes critical to being able to take full advantage from the data asset.
+## What's the value to move your mashup on Qlik Cloud?
 
-*Embedded analytics* seamlessly integrate analytic capabilities and content into business applications, products, websites or portals. It lets users quickly access relevant data and insights in their daily workflows without slowing down and switching to use a separate analytics application. This makes it easier for organizations to empower employees, customers, suppliers and partners with the information they need right where they work to answer questions, make better decisions and take action faster. Please visit [Qlik Embedded Analytics](https://www.qlik.com/us/bi/embedded-analytics)
+Take profit from Qlik Cloud architecture for your embbeded analytics
+- A high-performance and secure cloud architecture, scalable and elastic
+- Seamless, continuous release of upgrades and enhancements
+- Reduced burden on internal IT resources
 
-### Introduction to Web Integration
-Unlike other Business Intelligence and Analytics Platforms on the market that start out as BI platforms and become endpoints within a data project, Qlik wants to ensure that what
-is created inside the *Qlik Active Intelligence Platform*, does not remain bounded and accessible only within it but can be embedded
-in a single platform entry-point which corporate decision-making processes take place.
+Improve your embedded analytics :
+- Add value embedding new capabilities features : Alerting, Notes, Automation,...
+- Oppurtunity to upgrade your web integration with the lastest released libraries as Nebula.js wihtout limitations
+- An easy and secure cloud solution integration with for example handling CORS requests in Qlik Sense SaaS
 
-Hence, if we create a data model together with data visualization layer in Qlik, this by default will be accessible on the dedicated Qlik Sense SaaS tenant but can also be embedded within portals, business solutions or services that an ISV delivers to its end customers.
+It allows you to discover new use cases, deploying to a larger population and create new business value with Active Intelligence platform
 
-This can be easily accomplished because Qlik embedded strategy is not based on proprietary languages, but on standard web technologies. This is enriched by what we call at  Qlik *"API first approach"* which allows us to expose almost all the features of the standard product to be integrated and used within A third party applications.
+## How to move?
 
-### What is a mashup and what are common use cases?
-The way to integrate Qlik into a third-party system is to create a mashup.
-What is a mashup? A mashup is a web page or web application that reuses content from one or more sources to create a service made available to the end user via a single graphic interface/tool. Hence imagine you have your web solution on-premise or on SaaS that may retrieve content from your Qlik Sense SaaS tenant. Analytics are embedded inside the solution itself and allow the end users to have all the information and advanced analytics tools they need within a single platform where business decision-making processes take place, without having to use two different instruments that do not communicate between each other.
+### Assess your current web integration
 
-## How to do it?
-How to make embedded analytics with Qlik? 
-As for the analytics part, we offer different methods and levels of integration, each with a different complexity. Which one is right for your needs depends on the design requirements you have. In any case, as you will be able to see in the following sections, everything can be done by calling the Qlik native APIs included within the standard product in SaaS.
+1. Start by asking you the right questions
 
-Despite in this section we will focus on the Analytics part only, it is important to consider that **Augmented Intelligence** capabilities are increasingly available to improve and enhance the user's analytical capacity within the platform. These concern for example the *creation of intelligent alerts* or a virtual assistant that talks with the user in natural language. Qlik's API first approach permits to even integrate these additional functionalities into your solutions. [More detail in the section ...].
+- *Where my mashup or web application is hosted?*
 
-## Embedding strategies
-As for the Embedded Analytics part, we basically offer two different types of embedding strategies, the embedding via Iframe and the embedding using one of the available JS libraries.
-Let's see them in details in the next sections.
+You must host your mashup in a cloud accessible location.
+In Qlik Sense Client manage your mashup or web app can be hosted in your Qlik Sense Client Managed site.
+Qlik Cloud don't allow the hosting.
 
-  ### Iframe integration
-  The simplest and by far the most common method of embedding into your solutions analytics built in Qlik Sense SaaS is certainly through the use of an Iframe. An Iframe is generally used to show the content of a web resource, in our case Qlik Sense, within a frame of a web page/main portal.
+- *How do I manage the authentication?*
+
+Authentication is done by triggering a login process on the Qlik Cloud deployment, which is turn relies on the configured IdP.
+Authentication source and flow is changing.
+
+- *What is embbed?*
+
+Assess what you use for embedded analytics and how.
+  - IFrame
+  - Div
+  - On the fly visualization
+  - Data Only
   
-
-   #### How does it work?
-   
-   #### When to use it/when not to use it?
-   PRO: when you need a quick fix. When Qlik Sense's look & feel meets your needs. Because? because there are still themes
-that can be applied to Qlik dashboards to completely customize their appearance and make them completely in line with what are the
-corporate color palette and corporate standards (white labeling of the platform) but obviously we cannot go to use style and JS to go to
-customize the style and native behavior of graphic objects by making them interact with our page.
-If you want to embed the self-service part, that is to give the user the possibility to create new sheets, or to embed an entire sheet of a
-application or the insight advisor to allow you to use the Qlik Cognitive Engine for guided data analysis through the use of insights, this
-It is the only way.
-   
-  ### Javascript Integration
-  description
-   #### Nebula.js and Enigma.js libraries
-   description
-   ##### How does it work?
-   tbd
-   ##### When to use it/when not to use it?
-   
-   #### Capability APIs
-   description
-   ##### How does it work?
-   tbd
-   ##### When to use it/when not to use it? 
-   
-   
-  
- 
+![image](https://user-images.githubusercontent.com/24877503/166873460-7a988057-87d6-44c0-b3e3-810ab303c30d.png)
 
 
+> Do the hub is embedded? This is a current limitation on Qlik Cloud.
 
+- *What is the source of my resource?*
 
+Identify the resources used in your mashup or web application : 
+What is the new app in Qlik Cloud and its AppId?
+What is the links to my resources : Qlik JS, CSS, Images, etc. Links requires to change to resources located in the Qlik Sense SaaS resources folder or accessible from your mashup.  
 
+### Update your mashups or web application
+[How To](https://help.qlik.com/en-US/sense-developer/February2022/Subsystems/Mashups/Content/Sense_Mashups/Howtos/external-mashups-integrate-cloud.htm)
+
+1. Update the authentication method
+2. Deploying web apps and mashups
+  - Potentially change the hosting
+  - Update links and resources location
+  - Cross-domain resource sharing
+  - Update AppId to the new application created on Qlik Cloud
+
+Need help? take a look on a [simple Qlik Mashup integration on Qlik Cloud](https://help.qlik.com/en-US/sense-developer/February2022/Subsystems/Mashups/Content/Sense_Mashups/mashups-build_cloud.htm)
+
+#### Others change with Qlik Cloud?
+
+- *Where my application must be store?*
+
+Check app life cycle management
+
+- *Ouch! I was used to developping with the Dev-Hub!?*
+
+There is currently no Dev-Hub in Qlik Cloud. However, here are some tips and tools to facilitate the move : 
+  - Developper mode
+    1. Open a sheet in a Qlik Sense app in your browser
+    2. Add /options/developer to the url
+    3. Right click on an object and choose "Developer"
+    
+    ![image](https://user-images.githubusercontent.com/24877503/168016445-65fbb1fa-e096-40aa-9c8a-6a17b16dc1ee.png)
+    
+    You can get the object id, properties, and layout of any object this way. There's also a link to open the object in single configurator, and test   exporting. The object id's are useful for embedding visualizations. The properties are useful if you are creating your own objects and want to check the properties of an object in a Qlik Sense app for reference.
+
+  - Other tooling, as Glitch (add links...)
+  - qix explorer (add tool beta)
+
+### Going further : Improve your embedded analytics
+
+#### Embedded Active Intelligence 
+
+- Embedded Notes : Giacomo? (Not public API)
+- Embedded Insight Advisor : 
+[How To](https://help.qlik.com/en-US/sense-developer/February2022/Subsystems/Mashups/Content/Sense_Mashups/Howtos/mashups-integrate-IA-chat.htm)
+- Embededd Alert : To dig ???
+
+#### Nebula.js and Enigma.js
+
+adding example
+Enigma.js and Nebula.js allows an advanced capabilities of integration
+- Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
+- Qlik nebula.js is an open source collection of JavaScript libraries, visualizations, and CLIs that help developers build and integrate visualizations into their own web app or build their own client extension.
+
+More info on [Qlik.Dev](https://qlik.dev/basics/integrating-qlik-objects-into-web-apps)
