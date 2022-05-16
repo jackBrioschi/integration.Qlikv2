@@ -98,7 +98,7 @@ If otherwise you need to embed new content (new visualizations or new sheets) vi
 tbd
 
 #### Prerequisites
-In order to correctly perform an integration using Javascript APIs, a new web integration id has to be created from the Qlik Cloud management console.
+In order to correctly perform an integration using Javascript APIs, a new **web integration id** has to be created from the Qlik Cloud management console.
 You can create web integrations to add origins that are allowlisted to access the tenant. The web integration containing the allow list is connected to an ID used in for example a mashup that is connecting to your tenant. When a request arrives, Qlik Sense confirms that the request derives from an allowlisted domain and then approves the request, else not.
 Make sure you add the source that hosts the mashup to your whitelist while creating a new web Integration ID.
 
