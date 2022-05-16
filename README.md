@@ -56,3 +56,13 @@ Let's see them in details in the next sections where we assume you are already a
 If this is not the case, we invite you to see the section [Web Integration With Qlik](link to giacomo) where you can start from scratch and choose the best integration method that fits with your needs.
 In any case, as you will be able to see in the following sections, everything can be done by calling the Qlik native APIs included within the standard product in SaaS.
 
+#### Iframe Integration
+
+##### Introduction
+Converting your Integration via Iframe from Qlik Sense Enterprise on Windows to Qlik Cloud Services is fairly straightforward. 
+To start using this capability, simply head over to a sheet, right click a visualization, and choose "Embed chart" from the context menu.
+
+##### Prerequisites
+
+##### How to do it
+To start using this capability, simply head over to a sheet, right click a visualization, and choose "Embed chart" from the context menu.
