@@ -65,15 +65,19 @@ To start using this capability, simply head over to a sheet, right click a visua
 ##### Prerequisites
 
 ##### How to do it
- ###### Single Object
- To start using this capability, simply head over to a sheet, right click a visualization, and choose "Embed chart" from the context menu.
-  <p align="center">
-   <img src="src/gif/Single%20Object%20Integration.gif" width="2800" title="Single Object Integration" align="center"/>
-  </p>
+ There are two different possibilities to embed Qlik Cloud content using Iframe: Embed an entire sheet or embed an existing visualization object. 
+ The APIs to be used are the same you've already used on the client-managed platform, i.e. [Single Integration APIs](https://qlik.dev/apis/javascript/single-integrations).
+You can then easily migrate from a Qlik Sense on Windows Iframe integration to Qlik Cloud by only changing the *hostName* and the *appId* inside the iFrame URL. Do I need to change also sheetId and objects Id? Well, if you migrated correctly the app into Qlik Sense SaaS, the ids of these objects should remain the same.
 
- ###### Entire Sheet
- If you want to embed the entire sheet, click on the top-left context menu and choose "Embed sheet" like in the example below.
-  <p align="center">
-   <img src="src/gif/Single%20Object%20Integration.gif" width="800" title="Single Sheet Integration" align="center"/>
-  </p>
+  ###### Single Object
+  To start using this capability, simply head over to a sheet, right click a visualization, and choose "Embed chart" from the context menu.
+   <p align="center">
+    <img src="src/gif/Single%20Object%20Integration.gif" width="2800" title="Single Object Integration" align="center"/>
+   </p>
+
+  ###### Entire Sheet
+  If you want to embed the entire sheet, click on the top-left context menu and choose "Embed sheet" like in the example below.
+   <p align="center">
+    <img src="src/gif/Single%20Sheet%20Integration.gif" width="800" title="Single Sheet Integration" align="center"/>
+   </p>
 
