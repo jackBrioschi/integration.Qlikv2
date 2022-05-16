@@ -113,7 +113,7 @@ The adaptation we need to make can be summarized in the following steps:
 
 ```javascript
 const config = {
-  host: 'your-tenant.eu.qlikcloud.com',        //for example, 'abc.eu.example.com'
+  host: 'your-tenant.eu.qlikcloud.com',        //for example, 'abc.eu.qlikcloud.com'
   prefix: '/',
   port: 443,
   isSecure: true,
