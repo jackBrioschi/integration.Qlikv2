@@ -50,7 +50,7 @@ In relation to Embedded Analytics with Qlik, we basically offer four different t
  * **On the fly**
  * **Data Only**
  
-Can I maintain the same embedding strategies I adopted on Qlik Sense Client Manage on my new Qlik Cloud platform? **Yes, of course you can!**.
+Can I maintain the same embedding strategies I adopted on Qlik Sense Client Managed on my new Qlik Cloud platform? **Yes, of course you can!**.
 You just need to be aware about some small differences there are between the two different platform in terms of embedding. 
 Let's see them in details in the next sections where we assume you are already aware and you already know the embedding strategies you are currently using.
 If this is not the case, we invite you to see the section [Web Integration With Qlik](link to giacomo) where you can start from scratch and choose the best integration method that fits with your needs.
