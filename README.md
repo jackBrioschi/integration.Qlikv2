@@ -95,7 +95,7 @@ If otherwise you need to embed new content (new visualizations or new sheets) vi
 ### Div-Tag Integration
 
 #### Introduction
-tbd
+In this section we are going to describe how to adapt your existing mashup based on [Capability APIs](https://qlik.dev/apis/javascript/capabilities) to be moved to Qlik Cloud. Please note that we have also another Javascript library available for Embedded Analytics use case that is **Nebula.js**. This is a collection of product and framework agnostic JavaScript libraries and APIs that helps developers integrate visualizations and mashups on top of the Qlik associative engine. It offers developers a modern alternative to the capability APIs. If you are interested to convert your existing mashup to Nebula.js please go to [this section](https://github.com/jackBrioschi/integration.Qlikv2/tree/Jack). Otherwise, if you are just interested to adapt your Capability APIs mashup to Qlik Cloud, continue in the below sections.
 
 #### Prerequisites
 In order to correctly perform an integration using Javascript APIs, a new **web integration id** has to be created from the Qlik Cloud management console.
