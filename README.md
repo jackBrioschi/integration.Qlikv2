@@ -103,8 +103,27 @@ You can create web integrations to add origins that are allowlisted to access th
 Make sure you add the source that hosts the mashup to your whitelist while creating a new web Integration ID.
 
 #### How to do it
-Copy the web integration id and paste it as the value of webIntegrationId inside qlikConfig dictionary in public/js/mashup.js file.
+In order to move your existing Div Tag integration from Qlik Sense Enterprise on Windows to Qlik Sense Enterprise SaaS, we need to make a set of small changes to the config settings and the source of Qlik libraries we are loaded to perform the integration. 
+**The core part of the integration using the apis capabilities remains unchanged** as the same library is available on Qlik Cloud.
 
+The adaptation we need to make can be summarized in the following steps:
+* **Change the references of the actual Qlik associative engine connection**, which is used when you open an app or get a list of apps. This is covered by the config JavaScript object, used as a parameter in the openApp call.
+* To define where the **Qlik Sense client-side software and files should be loaded from**. This is achieved by configuring RequireJS with the require.config call and setting the baseUrl.
+* **To define the web integration ID**, which is necessary to enable cross-domain resource sharing.
+
+```javascript
+const config = {
+  host: 'your-tenant.eu.qlikcloud.com',        //for example, 'abc.eu.example.com'
+  prefix: '/',
+  port: 443,
+  isSecure: true,
+  webIntegrationId: 'web-integration-id-here',  //paste here the web integration id you've created in the pre-reqs section
+};
+require.config({
+  baseUrl: `https://${config.host}/resources`,
+  webIntegrationId: config.webIntegrationId,
+});
+```
 
 #### Known Limitation
 tbd
