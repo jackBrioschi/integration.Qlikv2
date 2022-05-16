@@ -20,7 +20,7 @@ Qlik Cloud allows you to surf the wave of modern analytics, always giving you im
 ## How to move your mashup from Qlik Sense Client-Managed to Qlik Cloud?
 
 ### Assess your current web integration
-
+Typically the three main pillars for completing an integration project concern understanding and choosing *where to host the solution*,  *how I can authenticate and authorize users* who already use the services inside my platform to be able to access the embedded analytics and which is the *web integration method* most in line with the needs you have.
 There are many different ways and possibility to deploy mashup with Qlik. Start by asking you the right questions:
 
  * *Where my mashup or web application is hosted?*
@@ -33,7 +33,7 @@ There are many different ways and possibility to deploy mashup with Qlik. Start 
 tbd
 
 ### Authentication
-tbd
+Within this part, therefore, we must deal with the concept of security within the Sense platform and show you also in this case the different possibilities we have to authenticate a user to our platform. Authentication in Qlik Sense allows you to establish a user session within the platform and typically answers the question *"Who is the user"*? The authentication process requires that based on something that the user has, this allows him or her to access the platform or not. 
 
 ### Embedding Strategy 
 tbd
