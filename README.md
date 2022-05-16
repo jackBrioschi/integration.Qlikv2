@@ -65,8 +65,15 @@ To start using this capability, simply head over to a sheet, right click a visua
 ##### Prerequisites
 
 ##### How to do it
-To start using this capability, simply head over to a sheet, right click a visualization, and choose "Embed chart" from the context menu.
- <p align="center">
-  <img src="src/gif/Single%20Object%20Integration.gif" width="1000" title="Single Sheet Integration" align="center"/>
- </p>
+ ###### Single Object
+ To start using this capability, simply head over to a sheet, right click a visualization, and choose "Embed chart" from the context menu.
+  <p align="center">
+   <img src="src/gif/Single%20Object%20Integration.gif" width="2800" title="Single Object Integration" align="center"/>
+  </p>
+
+ ###### Entire Sheet
+ If you want to embed the entire sheet, click on the top-left context menu and choose "Embed sheet" like in the example below.
+  <p align="center">
+   <img src="src/gif/Single%20Object%20Integration.gif" width="800" title="Single Sheet Integration" align="center"/>
+  </p>
 
