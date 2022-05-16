@@ -28,6 +28,10 @@ There are many different ways and possibility to deploy mashup with Qlik. Start 
  * *How do I manage the authentication?*
 
  * *Which embedding strategy do I currently use?*
+ <br></br>
+ <p align="center">
+  <img src="src/img/analytics_modernization_flow.png" width="1000" title="hover text" align="center"/>
+ </p>
 
 ### Hosting (Baptiste)
 tbd
