@@ -74,7 +74,8 @@ You can then easily migrate from a Qlik Sense on Windows Iframe integration to Q
   * Just replace your old *hostName* (old Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*).
   * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously.
    ```HTML
-  <iframe src="https://{hostName}/single/?appid={appId}&obj=BbKPXm&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"></iframe>
+  <iframe src="https://{hostName}/single/?appid={appId}&obj=BbKPXm&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;">
+  </iframe>
    ```
 
 
