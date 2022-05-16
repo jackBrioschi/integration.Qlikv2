@@ -67,12 +67,19 @@ To start using this capability, simply head over to a sheet, right click a visua
 ##### How to do it
  There are two different possibilities to embed Qlik Cloud content using Iframe: Embed an entire sheet or embed an existing visualization object. 
  The APIs to be used are the same you've already used on the client-managed platform, i.e. [Single Integration APIs](https://qlik.dev/apis/javascript/single-integrations).
+ 
 You can then easily migrate from a Qlik Sense on Windows Iframe integration to Qlik Cloud by only changing the *hostName* and the *appId* inside the iFrame URL. 
 *Do I need to change also sheetId and objects Id?* Well, if you migrated correctly the app into Qlik Sense SaaS, the ids of these objects should remain the same.
 
+  ###### Single Sheet
+  * Just replace your old *hostName* (old Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*). 
+  * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously.*sheetId* should remain the same as before.
+   ```HTML
+  <iframe src="https://{hostName}/single/?appid={appId}&sheet=0fb8a6b4-341d-4999-af96-2130849f0f85&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"></iframe>
+   ```
   ###### Single Object
-  * Just replace your old *hostName* (old Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*).
-  * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously.
+  * Replace your old *hostName* (old Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*).
+  * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously. *objectId* should remain the same as before.
    ```HTML
   <iframe src="https://{hostName}/single/?appid={appId}&obj=BbKPXm&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;">
   </iframe>
