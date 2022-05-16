@@ -88,5 +88,6 @@ If otherwise you need to embed new content (new visualizations or new sheets) vi
   <iframe src="https://{hostName}/single/?appid={appId}&obj=BbKPXm&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;">
   </iframe>
    ```
-
+##### Known Limitation
+* Embedding the Hub in Qlik Cloud is not possible at the moment.
 
