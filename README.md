@@ -60,7 +60,7 @@ In any case, as you will be able to see in the following sections, everything ca
 
 ##### Introduction
 Converting your Integration via Iframe from Qlik Sense Enterprise on Windows to Qlik Cloud Services is fairly straightforward. 
-To start using this capability, simply head over to a sheet, right click a visualization, and choose "Embed chart" from the context menu.
+To convert your existing Iframe Integration to Qlik SaaS, please follow the steps below.
 
 ##### Prerequisites
 Before performing any kind of integration via Iframe, **Content Security Policy (CSP)** needs to be properly configured.
