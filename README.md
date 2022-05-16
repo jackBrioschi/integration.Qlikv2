@@ -41,5 +41,18 @@ Within this part, therefore, we must deal with the concept of security within th
 In Qlik Sense Cloud, as well as in Qlik Sense Client-Managed, you can use an already existing identity provider (IdP) when setting up your deployment. For more information regarding this part, please visit [Authentication for Qlik Cloud Mashup](https://github.com/apamo/QlikSenseCM2SaaS/blob/main/introduction%20to%20Qlik%20Sense%20SaaS%20security.md)
 
 ### Embedding Strategy 
-tbd
+How to modernize your embedded analytics with Qlik? 
+As you are probably already aware, we offer different methods and levels of integration, each with a different complexity.
+Which one is right for your needs depends on the design requirements you have. 
+In relation to Embedded Analytics with Qlik, we basically offer four different types of embedding strategies:
+ * **Iframe Integration**
+ * **Div-Tag Integration**
+ * **On the fly**
+ * **Data Only**
+ 
+Can I maintain the same embedding strategies I adopted on Qlik Sense Client Manage on my new Qlik Cloud platform? **Yes, of course you can!**.
+You just need to be aware about some small differences there are between the two different platform in terms of embedding. 
+Let's see them in details in the next sections where we assume you are already aware and you already know the embedding strategies you are currently using.
+If this is not the case, we invite you to see the section [Web Integration With Qlik](link to giacomo) where you can start from scratch and choose the best integration method that fits with your needs.
+In any case, as you will be able to see in the following sections, everything can be done by calling the Qlik native APIs included within the standard product in SaaS.
 
