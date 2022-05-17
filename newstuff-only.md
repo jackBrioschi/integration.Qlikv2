@@ -47,3 +47,25 @@ The resources location will also be updated
 Of course, as your Qlik applications are now hosting in a new Qlik Sense site, the Application should also be changed...
 
 All these kind of change will be details below!
+
+
+#### Others changes? Tip & Tricks
+
+- *Where my application must be store?*
+
+Check app life cycle management
+
+- *Ouch! I was used to developping with the Dev-Hub!?*
+
+There is currently no Dev-Hub in Qlik Cloud. However, here are some tips and tools to facilitate the move : 
+  - Developper mode
+    1. Open a sheet in a Qlik Sense app in your browser
+    2. Add /options/developer to the url
+    3. Right click on an object and choose "Developer"
+    
+    ![image](https://user-images.githubusercontent.com/24877503/168016445-65fbb1fa-e096-40aa-9c8a-6a17b16dc1ee.png)
+    
+    You can get the object id, properties, and layout of any object this way. There's also a link to open the object in single configurator, and test   exporting. The object id's are useful for embedding visualizations. The properties are useful if you are creating your own objects and want to check the properties of an object in a Qlik Sense app for reference.
+
+  - Other tooling, as Glitch (add links...)
+  - qix explorer (add tool beta)
