@@ -56,41 +56,57 @@ What is the links to my resources : Qlik JS, CSS, Images, etc. Links requires to
 
 ### Update your mashups or web application
 
-#### Hosting (Baptiste)
+#### Hosting
 
-First thing to assess when you are thinking about the move to Qlik Cloud are : 
+##### Understand the context
+First thing is to assess what will move to Qlik Cloud : 
 - Where the analytics is embedded?
 - Which can of resources is using?
 - Where the sources are hosted?
 
-##### Understand the context
-In Qlik, we are distinguished 2 kind of applications :
-Web Apps : It means the web applications in which you use the Qlik Backend API. No Qlik front end files are used.
-Mashups : It means the integration in the web applications using Qlik Sense Capabilities API and other front-end Qlik resources as JS files and CSS.
+In Qlik, we have 2 kind of applications :
+- Web Apps : All the web applications in which I'm using the Qlik Backend API. No Qlik front-end files are used (JS or CSS).
+- Mashups : The integration of Qlik resources in web applications using Qlik Sense Capabilities API and other front-end Qlik resources as JS files and CSS.
 
-Moreover, your embedded can be embedded in a dedicated web-site or directly in your product.
-You have to identified the dependencies.
+Moreover, the mashup or web application can be embedded in another product.
+The potentential specific dependencies have to be identified.
 
 ##### Where can I host my mashups?
-Your mashup or web-app must be hosted in a cloud accessible location.
-In Qlik Sense Client Managed your mashup or web app can be hosted in your Qlik Sense Client Managed site. This is not possible in Qlik Cloud.
-For example you can host in a cloud provider. For simple use case for a static mashup, a storage provider can be used.
+The mashup or web-app must be hosted in a cloud accessible location. Qlik Cloud and the user must have access to the resources. 
+In Qlik Sense Client-Managed the mashup or web app can be hosted in your Qlik Sense Client-Managed site. This is not possible in Qlik Cloud.
+One possibility is to host it in a cloud provider.
+For simple use case with a static web-site mashup, a common storage provider can be used.
 
-##### Update my sources
+Here some example on different cloud provider
+> **Warning : These tutorials make content available to the public internet. Please adapt the security regarding your use cases.**
+- [Hosting a static website on AWS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
+- [Hosting a static website on Azure](https://azure.microsoft.com/fr-fr/blog/static-websites-on-azure-storage-now-generally-available/)
+- [Hosting a static website on Google Cloud Platform](https://cloud.google.com/storage/docs/hosting-static-website)
 
-CORS Configuration
 
-Browsers and web servers implement security policies to mitigate risks inherent with being connected to the internet. When a web server shares a resource such as an image on its own server, it is following the same-origin policy. In this case, the resource is accessed by the same protocol, domain, and port as the server. On the other hand, a secure request for a resource from a different origin (known as a cross-origin request) requires a cross-origin resource sharing (CORS) policy. CORS allows servers to specify who (the origin) can access the assets on the server. To enable cross-origin resource sharing, the site URL that is hosting the mashup or web app must be added to a whitelist on the Qlik Sense SaaSserver. This process of setting up the whitelist is known as web integration.
+##### Settings
 
-Qlik Sense allows you to configure CORS policies on a per web integration basis. For example, if you have two web integrations "A" and "B", and you want both to be accessible from foo.com, you need to add foo.com to the domain whitelist of both web integrations. Web integration entities are created by the tenant admin through the management console.
+Moving the mashup or the web app to Qlik Cloud will have impacts in term of security and resources location.
 
-The resource location must be updated
+Browsers and web servers implement security policies to mitigate risks inherent with being connected to the internet. 
+Cross-Origin Resource Sharing (CORS) allows to a server to indicate the origin (other than its own) from which a browser should permit loading resources.
+When a web server shares a resource such as an image on its own server, it is following the same-origin policy. In this case, the resource is accessed by the same protocol, domain, and port as the server. On the other hand, a secure request for a resource from a different origin (known as a cross-origin request) requires a cross-origin resource sharing (CORS) policy. CORS allows servers to specify who (the origin) can access the assets on the server. To enable cross-origin resource sharing, the site URL that is hosting the mashup or web app must be added to a whitelist on the Qlik Sense SaaSserver. This process of setting up the whitelist is known as web integration. Qlik Sense allows you to configure CORS policies on a per web integration basis. For example, if you have two web integrations "A" and "B", and you want both to be accessible from foo.com, you need to add foo.com to the domain whitelist of both web integrations. Web integration entities are created by the tenant admin through the management console. *From [Qlik Help Page](https://help.qlik.com/en-US/sense-developer/May2022/Subsystems/Mashups/Content/Sense_Mashups/Howtos/external-mashups-integrate-cloud.htm)*
 
- ```      
-<link rel="stylesheet" href="https://QSE_domain/resources/autogenerated/qlik-styles.css">
-<script src="https://QSE_domain/resources/assets/external/requirejs/require.js"></script>
+[Need help?](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-administer-content-security-policy.htm)
+
+The resources location will also be updated
+
+ ``` HTML     
+<link rel="stylesheet" href="https://www.yourtenant.eu.qlikcloud.com/resources/autogenerated/qlik-styles.css">
+<script src="https://www.yourtenant.eu.qlikcloud.com/resources/assets/external/requirejs/require.js"></script>
 <script src="helpdesk.js"></script>
 ```
+
+Of course, as your Qlik applications are now hosting in a new Qlik Sense site, the Application should also be changed...
+
+All these kind of change will be details below!
+
+
 
 [How To](https://help.qlik.com/en-US/sense-developer/February2022/Subsystems/Mashups/Content/Sense_Mashups/Howtos/external-mashups-integrate-cloud.htm)
 
