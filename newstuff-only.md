@@ -51,9 +51,14 @@ All these kind of change will be details below!
 
 #### Others changes? Tip & Tricks
 
-- *Where my application must be store?*
+- *Where my application must be published?*
 
-Check app life cycle management
+In most of the case the existing Qlik application will be imported or distributed on Qlik Cloud.
+We recommend to use an application from a managed space in your Mashup. Managed spaces are commonly used for governed content.
+The security implemented for this space and application will define who can access to the application.
+All users using the mashup or web app must be authorized in this space. Please refer how to [manage permission in a managed space for more information](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Spaces/managing-managed-spaces.htm)
+
+The application id will also change! Take a look to the URL or the Details of the app to get the new Id.
 
 - *Ouch! I was used to developping with the Dev-Hub!?*
 
