@@ -58,7 +58,7 @@ We recommend to use an application from a managed space in your Mashup. Managed 
 The security implemented for this space and application will define who can access to the application.
 All users using the mashup or web app must be authorized in this space. Please refer how to [manage permission in a managed space for more information](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Spaces/managing-managed-spaces.htm)
 
-The application id will also change! Take a look to the URL or the Details of the app to get the new Id.
+The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadat including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
 
 - *Ouch! I was used to developping with the Dev-Hub!?*
 
@@ -72,5 +72,23 @@ There is currently no Dev-Hub in Qlik Cloud. However, here are some tips and too
     
     You can get the object id, properties, and layout of any object this way. There's also a link to open the object in single configurator, and test   exporting. The object id's are useful for embedding visualizations. The properties are useful if you are creating your own objects and want to check the properties of an object in a Qlik Sense app for reference.
 
-  - Other tooling, as Glitch (add links...)
-  - qix explorer (add tool beta)
+  - *And what's about the Mashup Editor?
+  
+  There is no mashup editor in Qlik SaaS. There are plenty of tools for web development as *Glitch* where you can experiment easily.
+  Follow [Qlik on Glitch](https://glitch.com/@qlik) for mashups example and to be inspired
+  
+  - *I need to interact with the Qlik Engine
+
+Take a look to the new [QIX explorer](https://qixplorer.qlik.dev/) - Bêta
+
+### Going further : Improve your embedded analytics
+
+#### Nebula.js and Enigma.js
+
+*Add GIACOMO EXAMPLE*
+
+Enigma.js and Nebula.js allows an advanced capabilities of integration
+- Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
+- Qlik nebula.js is an open source collection of JavaScript libraries, visualizations, and CLIs that help developers build and integrate visualizations into their own web app or build their own client extension.
+
+More info on [Qlik.Dev](https://qlik.dev/basics/integrating-qlik-objects-into-web-apps)
