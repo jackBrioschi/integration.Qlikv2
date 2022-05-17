@@ -72,12 +72,12 @@ There is currently no Dev-Hub in Qlik Cloud. However, here are some tips and too
     
     You can get the object id, properties, and layout of any object this way. There's also a link to open the object in single configurator, and test   exporting. The object id's are useful for embedding visualizations. The properties are useful if you are creating your own objects and want to check the properties of an object in a Qlik Sense app for reference.
 
-  - *And what's about the Mashup Editor?
+  - *And what's about the Mashup Editor?*
   
   There is no mashup editor in Qlik SaaS. There are plenty of tools for web development as *Glitch* where you can experiment easily.
   Follow [Qlik on Glitch](https://glitch.com/@qlik) for mashups example and to be inspired
   
-  - *I need to interact with the Qlik Engine
+  - *I need to interact with the Qlik Engine*
 
 Take a look to the new [QIX explorer](https://qixplorer.qlik.dev/) - Bêta
 
