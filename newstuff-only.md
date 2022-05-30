@@ -48,7 +48,7 @@ Of course, as your Qlik applications are now hosting in a new Qlik Sense site, t
 
 All these kind of change will be details below!
 
-#### Others changes? Tip & Tricks
+#### Others changes? Tips & Tricks
 
 - *Where my application must be published?*
 
@@ -78,7 +78,7 @@ You can get the object id, properties, and layout of any object this way. There'
 There is no mashup editor in Qlik SaaS. There are plenty of tools for web development as *Glitch* where you can experiment easily.
 Follow [Qlik on Glitch](https://glitch.com/@qlik) for mashups example and to be inspired
   
-- *New Qix Ewplorer to interact with the Qlik Engine*
+- *New Qix Explorer to interact with the Qlik Engine*
 
 To leverage the full potential of the platform to create complex visualizations or satisfy custom development needs, understanding the Engine API is fundamental to taking advantage of what Qlik Sense hides under the hood.
 
