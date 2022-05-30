@@ -3,7 +3,7 @@
 ##### Understand the context
 First thing is to assess what will move to Qlik Cloud : 
 - Where the analytics is embedded?
-- Which can of resources is using?
+- Which can of resources are using?
 - Where the sources are hosted?
 
 In Qlik, we have 2 kind of applications :
@@ -19,7 +19,7 @@ In Qlik Sense Client-Managed the mashup or web app can be hosted in your Qlik Se
 One possibility is to host it in a cloud provider.
 For simple use case with a static web-site mashup, a common storage provider can be used.
 
-Here some example on different cloud provider
+Here some examples on different cloud provider
 > **Warning : These tutorials make content available to the public internet. Please adapt the security regarding your use cases.**
 - [Hosting a static website on AWS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
 - [Hosting a static website on Azure](https://azure.microsoft.com/fr-fr/blog/static-websites-on-azure-storage-now-generally-available/)
