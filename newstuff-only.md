@@ -48,7 +48,6 @@ Of course, as your Qlik applications are now hosting in a new Qlik Sense site, t
 
 All these kind of change will be details below!
 
-
 #### Others changes? Tip & Tricks
 
 - *Where my application must be published?*
@@ -62,33 +61,40 @@ The application id will also change! Take a look to the URL of the application o
 
 - *Ouch! I was used to developping with the Dev-Hub!?*
 
-There is currently no Dev-Hub in Qlik Cloud. However, here are some tips and tools to facilitate the move : 
-  - Developper mode
+There is currently no Dev-Hub in Qlik Cloud. However, below some tips and tools to facilitate the move.
+
+- *Developper mode to explore objects*
+
+You can get the object id, properties, and layout of any object this way. There's also a link to open the object in single configurator, and test   exporting. The object id's are useful for embedding visualizations. The properties are useful if you are creating your own objects and want to check the properties of an object in a Qlik Sense app for reference. [More infos here](https://help.qlik.com/en-US/sense-developer/May2022/Subsystems/Extensions/Content/Sense_Extensions/Howtos/displaying-dev-tools.htm)
+
     1. Open a sheet in a Qlik Sense app in your browser
     2. Add /options/developer to the url
     3. Right click on an object and choose "Developer"
     
-    ![image](https://user-images.githubusercontent.com/24877503/168016445-65fbb1fa-e096-40aa-9c8a-6a17b16dc1ee.png)
+![image](https://user-images.githubusercontent.com/24877503/170967478-142b2e1e-791c-49e2-8166-8dad22f43c17.png)
     
-    You can get the object id, properties, and layout of any object this way. There's also a link to open the object in single configurator, and test   exporting. The object id's are useful for embedding visualizations. The properties are useful if you are creating your own objects and want to check the properties of an object in a Qlik Sense app for reference.
-
-  - *And what's about the Mashup Editor?*
+ - *External tooling as a web editor?*
   
-  There is no mashup editor in Qlik SaaS. There are plenty of tools for web development as *Glitch* where you can experiment easily.
-  Follow [Qlik on Glitch](https://glitch.com/@qlik) for mashups example and to be inspired
+There is no mashup editor in Qlik SaaS. There are plenty of tools for web development as *Glitch* where you can experiment easily.
+Follow [Qlik on Glitch](https://glitch.com/@qlik) for mashups example and to be inspired
   
-  - *I need to interact with the Qlik Engine*
+- *New Qix Ewplorer to interact with the Qlik Engine*
 
-Take a look to the new [QIX explorer](https://qixplorer.qlik.dev/) - Bêta
+To leverage the full potential of the platform to create complex visualizations or satisfy custom development needs, understanding the Engine API is fundamental to taking advantage of what Qlik Sense hides under the hood.
+
+   Take a look to the new [QIX explorer](https://qixplorer.qlik.dev/) - [More info here](https://community.qlik.com/t5/Qlik-Design-Blog/Get-to-know-the-Engine-API-with-Qixplorer/ba-p/1924806)
+
+   ![image](https://user-images.githubusercontent.com/24877503/170963602-79997ed1-a989-46b0-a211-165b0820b3b9.png)
+
 
 ### Going further : Improve your embedded analytics
 
 #### Nebula.js and Enigma.js
 
-*Add GIACOMO EXAMPLE*
-
 Enigma.js and Nebula.js allows an advanced capabilities of integration
 - Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
 - Qlik nebula.js is an open source collection of JavaScript libraries, visualizations, and CLIs that help developers build and integrate visualizations into their own web app or build their own client extension.
+
+*Add GIACOMO EXAMPLE*
 
 More info on [Qlik.Dev](https://qlik.dev/basics/integrating-qlik-objects-into-web-apps)
