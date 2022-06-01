@@ -199,6 +199,11 @@ We recommend to use an application from a managed space in your Mashup. Managed 
 The security implemented for this space and application will define who can access to the application.
 All users using the mashup or web app must be authorized in this space. Please refer how to [manage permission in a managed space for more information](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Spaces/managing-managed-spaces.htm)
 
+ Here a simple application workflow in the same tenant.
+ 
+![image](https://user-images.githubusercontent.com/24877503/171173025-8fbc243d-1040-4062-bc54-e13b272bb576.png)
+> Note that in a hybrid cloud where the application is distributed from a Qlik Sense Client Managed site, the application will only be in the managed space.
+ 
 The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadat including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
 
 - *Ouch! I was used to developping with the Dev-Hub!?*
