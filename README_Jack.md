@@ -204,6 +204,6 @@ The adaptation we need to make can be summarized in the following steps:
 
  
 #### Known Limitations / Considerations
-If you are using extensions in your Qlik Apps, you need to load them from the Management Console of your tenant. Please before doing it, check out out [this page] (https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-extensions.htm) before importing them into Qlik Cloud where you can find requirements for extensions compatibility in Qlik Cloud.
+If you are using extensions in your Qlik Apps, you need to load them from the Management Console of your tenant. Please before doing it, check out out [this page](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-extensions.htm) before importing them into Qlik Cloud where you can find requirements for extensions compatibility in Qlik Cloud.
 
 
