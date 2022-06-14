@@ -33,7 +33,7 @@ There are many different ways and possibility to deploy mashup with Qlik. Start 
   <img src="src/img/analytics_modernization_flow.png" width="1000" title="hover text" align="center"/>
  </p>
 
-### Hosting
+### 1. Hosting
 
 #### Understand the context
 
@@ -83,11 +83,11 @@ Of course, as your Qlik applications are now hosting in a new Qlik Sense site, t
 
 All these kind of change will be details below!
 
-### Authentication
+### 2. Authentication
 Within this part, therefore, we must deal with the concept of security within the Sense platform and show you also in this case the different possibilities we have to authenticate a user to our platform. Authentication in Qlik Sense allows you to establish a user session within the platform and typically answers the question *"Who is the user"*? The authentication process requires that based on something that the user has, this allows him or her to access the platform or not. 
 In Qlik Sense Cloud, as well as in Qlik Sense Client-Managed, you can use an already existing identity provider (IdP) when setting up your deployment. For more information regarding this part, please visit [Authentication for Qlik Cloud Mashup](https://github.com/apamo/QlikSenseCM2SaaS/blob/main/introduction%20to%20Qlik%20Sense%20SaaS%20security.md)
 
-### Embedding Strategy 
+### 3. Embedding Strategy 
 How to modernize your embedded analytics with Qlik? 
 As you are probably already aware, we offer different methods and levels of integration, each one with a different complexity.
 Which one is right for your needs depends on the design requirements you have. 
