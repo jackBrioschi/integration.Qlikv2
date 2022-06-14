@@ -44,7 +44,7 @@ First thing is to assess what we want to move to Qlik Cloud :
 
 In Qlik, we have 2 kind of integrated applications :
 - Web Apps : All the web applications in which we are using the Qlik Backend API. Here, no Qlik front-end files are used (JS or CSS).
-- Mashups : The integration of Qlik resources in web applications using Qlik Sense Capabilities API and other front-end Qlik resources as JS files and CSS.
+- Mashups : The integration of Qlik resources in web applications using Qlik Sense Capabilities API or Nebula.JS and other front-end Qlik resources as JS files and CSS.
 
 Moreover, the mashup or web application can be embedded in another product.
 In this case potentential specific dependencies must be analyzed.
