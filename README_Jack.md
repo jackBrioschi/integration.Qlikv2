@@ -89,7 +89,7 @@ In Qlik Sense Cloud, as well as in Qlik Sense Client-Managed, you can use an alr
 
 ### Embedding Strategy 
 How to modernize your embedded analytics with Qlik? 
-As you are probably already aware, we offer different methods and levels of integration, each with a different complexity.
+As you are probably already aware, we offer different methods and levels of integration, each one with a different complexity.
 Which one is right for your needs depends on the design requirements you have. 
 In relation to Embedded Analytics with Qlik, we basically offer four different types of embedding strategies:
  * **Iframe Integration**
