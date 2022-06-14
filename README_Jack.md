@@ -150,7 +150,7 @@ You can integrate single Qlik Sense visualizations, sheets or snapshots into an 
    ```HTML
   <iframe src="https://{hostName}/single/?appid={appId}&obj={objectId}&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"> </iframe>
    ```
-#### Known Limitation
+#### Known Limitations / Considerations
 * Embedding the Hub in Qlik Cloud is not possible at the moment.
 
 
@@ -203,7 +203,7 @@ The adaptation we need to make can be summarized in the following steps:
     ```
 
  
-#### Known Limitation
-If you are using extensions in your Qlik Apps, you need to load them from the Management Console of your tenant. Please before doing it, check [this page](lease check the requirements on this page before importing them into Qlik Cloud) where you can find requirements for extensions compatibility in Qlik Cloud.
+#### Known Limitations / Considerations
+If you are using extensions in your Qlik Apps, you need to load them from the Management Console of your tenant. Please before doing it, check out  [this page]https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-extensions.htm) before importing them into Qlik Cloud where you can find requirements for extensions compatibility in Qlik Cloud.
 
 
