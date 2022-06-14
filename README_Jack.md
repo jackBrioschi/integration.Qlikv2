@@ -130,6 +130,7 @@ If otherwise you need to embed new content (new visualizations or new sheets) vi
  ```HTML
   <iframe src="https://{hostName}/sense/app/{appid}/sheet/{sheetid}/state/analysis" style="border:none;width:100%;height:100%;">
 </iframe>
+```
 
   ##### Single Sheet (Single Integration APIs)
 You can integrate single Qlik Sense visualizations, sheets or snapshots into an iframe. You use the Single Integration API to define how the object should be integrated into your web site.
@@ -145,9 +146,9 @@ You can integrate single Qlik Sense visualizations, sheets or snapshots into an 
   * Replace your old *hostName* (old Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*).
   * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously. 
   * *objectId* should remain the same as before.
+  *
    ```HTML
-  <iframe src="https://{hostName}/single/?appid={appId}&obj={objectId}&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;">
-  </iframe>
+  <iframe src="https://{hostName}/single/?appid={appId}&obj={objectId}&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"> </iframe>
    ```
 #### Known Limitation
 * Embedding the Hub in Qlik Cloud is not possible at the moment.
