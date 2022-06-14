@@ -11,7 +11,7 @@ There are many advantages we can offer for moving your embedded analytics soluti
   * Seamless, continuous release of upgrades and enhancements
   * Reduced burden on internal IT resources
   * Improve your embedded analytics by
-    * Add value embedding new capabilities features : Alerting, Notes, Automation,...
+    * Add value embedding new capabilities features : Alerting, Natural Language Processing, Automation,...
     * Oppurtunity to upgrade your web integration with the lastest released libraries as Nebula.js wihtout limitations
     * An easy and secure cloud solution integration with for example handling CORS requests in Qlik Sense SaaS
 
