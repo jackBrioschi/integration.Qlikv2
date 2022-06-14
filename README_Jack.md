@@ -166,7 +166,7 @@ Make sure you add the source that hosts the mashup to your whitelist while creat
 
 #### How to do it
 In order to move your existing Div Tag integration from Qlik Sense Enterprise on Windows to Qlik Sense Enterprise SaaS, we need to make a set of small changes to the config settings and the source of Qlik libraries we are loaded to perform the integration. 
-**The core part of the integration using the apis capabilities remains unchanged** as the same library is available on Qlik Cloud.
+**The core part of the integration using capabilities APIs remains unchanged** as the same library is available on Qlik Cloud.
 
 The adaptation we need to make can be summarized in the following steps:
 
