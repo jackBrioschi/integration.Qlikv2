@@ -206,4 +206,63 @@ The adaptation we need to make can be summarized in the following steps:
 #### Known Limitations / Considerations
 If you are using extensions in your Qlik Apps, you need to load them from the Management Console of your tenant. Please before doing it, check out [this page](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-extensions.htm) before importing them into Qlik Cloud where you can find requirements for extensions compatibility in Qlik Cloud.
 
+ ## Others changes? Tips & Tricks
+
+- *Where my application must be published?*
+
+In most of the case the existing Qlik application will be imported or distributed on Qlik Cloud.
+We recommend to use an application from a managed space in your Mashup. Managed spaces are commonly used for governed content.
+The security implemented for this space and application will define who can access to the application.
+All users using the mashup or web app must be authorized in this space. Please refer how to [manage permission in a managed space for more information](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Spaces/managing-managed-spaces.htm)
+
+ Here a simple application workflow in the same tenant.
+
+<p align="center">
+  <img src="src/img/QSE SaaS SDLC.png" title="hover text" align="center"/>
+</p>
+ 
+> Note that in a hybrid cloud where the application is distributed from a Qlik Sense Client Managed site, the application will only be in the managed space.
+ 
+The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadat including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
+
+- *Ouch! I was used to developping with the Dev-Hub!?*
+
+There is currently no Dev-Hub in Qlik Cloud. However, below some tips and tools to facilitate the move.
+
+- *Developper mode to explore objects*
+
+You can get the object id, properties, and layout of any object this way. There's also a link to open the object in single configurator, and test   exporting. The object id's are useful for embedding visualizations. The properties are useful if you are creating your own objects and want to check the properties of an object in a Qlik Sense app for reference. [More infos here](https://help.qlik.com/en-US/sense-developer/May2022/Subsystems/Extensions/Content/Sense_Extensions/Howtos/displaying-dev-tools.htm)
+
+    1. Open a sheet in a Qlik Sense app in your browser
+    2. Add /options/developer to the url
+    3. Right click on an object and choose "Developer"
+ 
+ <p align="center">
+  <img src="src/img/developper.png" title="hover text" align="center"/>
+</p>
+    
+ - *External tooling as a web editor?*
+  
+There is no mashup editor in Qlik SaaS. There are plenty of tools for web development as *Glitch* where you can experiment easily.
+Follow [Qlik on Glitch](https://glitch.com/@qlik) for mashups example and to be inspired
+  
+- *New Qix Explorer to interact with the Qlik Engine*
+
+To leverage the full potential of the platform to create complex visualizations or satisfy custom development needs, understanding the Engine API is fundamental to taking advantage of what Qlik Sense hides under the hood.
+
+   Take a look to the new [QIX explorer](https://qixplorer.qlik.dev/) - [More info here](https://community.qlik.com/t5/Qlik-Design-Blog/Get-to-know-the-Engine-API-with-Qixplorer/ba-p/1924806)
+
+ <p align="center">
+  <img src="src/img/qix.png" title="hover text" align="center"/>
+</p>
+ 
+### Going further : Improve your embedded analytics
+
+#### Nebula.js and Enigma.js
+
+Enigma.js and Nebula.js allows an advanced capabilities of integration
+- Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
+- Qlik nebula.js is an open source collection of JavaScript libraries, visualizations, and CLIs that help developers build and integrate visualizations into their own web app or build their own client extension.
+
+More info on [Qlik.Dev](https://qlik.dev/basics/integrating-qlik-objects-into-web-apps)
 
