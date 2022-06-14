@@ -15,7 +15,7 @@ There are many advantages we can offer for moving your embedded analytics soluti
     * Oppurtunity to upgrade your web integration with the lastest released libraries as Nebula.js and visualization capabilities (timeseries forecasting etc...)
     * An easy, robust and secure cloud solution integration with for example handling CORS requests in Qlik Sense SaaS
 
-Qlik Cloud allows you to surf the wave of modern analytics, always giving you immediate access to new features and improvements. It allows you to discover new use cases, deploying to a larger population and create new business value with Active Intelligence platform.
+Qlik Cloud allows you to surf the wave of modern analytics, always giving you immediate access to new features and improvements. It allows you to discover new use cases, deploying to a larger population and create new business value within Qlik Active Intelligence platform.
 
 ## How to move your mashup from Qlik Sense Client-Managed to Qlik Cloud?
 
