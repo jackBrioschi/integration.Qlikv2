@@ -55,7 +55,7 @@ In Qlik Sense Client-Managed the mashup or web app can be hosted in your Qlik Se
 One possibility is to host it on a cloud provider hosting service.
 For simple use case with a static web-site mashup, a common storage provider can be used.
 
-Here some examples on different cloud provider
+Here some examples on different cloud providers
 > **Warning : These tutorials make content available to the public internet. Please adapt the security regarding your use cases.**
 - [Hosting a static website on AWS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
 - [Hosting a static website on Azure](https://azure.microsoft.com/fr-fr/blog/static-websites-on-azure-storage-now-generally-available/)
