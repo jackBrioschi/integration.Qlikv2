@@ -271,9 +271,17 @@ To leverage the full potential of the platform to create complex visualizations 
 
 #### Nebula.js and Enigma.js
 
-Enigma.js and Nebula.js allows an advanced capabilities of integration
+You can improve and modernize your analytics thanks to new librairies.
+ 
+<p align="center">
+  <img src="src/img/LibrariesEvolution.png" title="hover text" align="center"/>
+</p>
+ 
+Enigma.js and Nebula.js allows an advanced capabilities of integration and framework agnostic
 - Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
 - Qlik nebula.js is an open source collection of JavaScript libraries, visualizations, and CLIs that help developers build and integrate visualizations into their own web app or build their own client extension.
+ 
+Going further to leverage more value and active intelligence from the whole Qlik Cloud platform 
 
 More info on [Qlik.Dev](https://qlik.dev/basics/integrating-qlik-objects-into-web-apps)
 
