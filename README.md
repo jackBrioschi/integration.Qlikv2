@@ -44,14 +44,14 @@ First thing is to assess what we want to move to Qlik Cloud :
 
 In Qlik, we have 2 kind of integrated applications :
 - Web Apps : All the web applications in which we are using the Qlik Backend API. Here, no Qlik front-end files are used (JS or CSS).
-- Mashups : The integration of Qlik resources in web applications using Qlik Sense Capabilities API or Nebula.JS and other front-end Qlik resources as JS files and CSS.
+- Mashups : The integration of Qlik resources in web applications using API or librairies as Qlik Sense Capabilities API or Nebula.JS and other front-end Qlik resources as JS and CSS files. Embedding an IFrame in an web page is also a mashup. 
 
 Moreover, the mashup or web application can be embedded in another product.
 In this case potentential specific dependencies must be analyzed.
 
 #### Where can I host my mashups?
 The mashup or web-app must be hosted in a cloud accessible location. Qlik Cloud and the user must have access to the resources. 
-In Qlik Sense Client-Managed the mashup or web app can be hosted in your Qlik Sense Client-Managed site as well. This is not possible in Qlik Cloud.
+Even if it is not recommended, the mashup or web app can be hosted in your Qlik Sense Client-Managed site as well. This is not possible in Qlik Cloud.
 One possibility is to host it on a cloud provider hosting service.
 For simple use case with a static web-site mashup, a common storage provider can be used.
 
@@ -222,6 +222,8 @@ All users using the mashup or web app must be authorized in this space. Please r
 </p>
  
 > Note that in a hybrid cloud where the application is distributed from a Qlik Sense Client Managed site, the application will only be in the managed space.
+
+In a OEM context, the Qlik recommended approach to set-up a multi-tenancy is to have 1 tenant per end-customer. 
  
 The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadat including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
 
