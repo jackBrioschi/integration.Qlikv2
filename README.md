@@ -233,7 +233,8 @@ Web apps or Mashups, hosted in a web server, embbed analytics form each tenants.
   <img src="src/img/MashupMultiTenant.png" title="hover text" align="center"/>
 </p>
  
-The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadat including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
+The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadata including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
+You also can get the AppId from the metadata by REST API. Retrieve the AppId when you create the applicaiton or explore your [Spaces]([https://qlik.dev/apis/rest/items](https://qlik.dev/apis/rest/spaces) and [Items](https://qlik.dev/apis/rest/items) to reach the right application
 
 - *Ouch! I was used to developping with the Dev-Hub!?*
 
