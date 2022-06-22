@@ -51,7 +51,7 @@ In this case potentential specific dependencies must be analyzed.
 
 #### Where can I host my mashups?
 The mashup or web-app must be hosted in a cloud accessible location. Qlik Cloud and the user must have access to the resources. 
-Even if it is not recommended, the mashup or web app can be hosted in your Qlik Sense Client-Managed site as well. This is not possible in Qlik Cloud.
+Even if it is not recommended for production, the mashup or web app can be hosted in your Qlik Sense Client-Managed site as well. This is not possible in Qlik Cloud.
 One possibility is to host it on a cloud provider hosting service.
 For simple use case with a static web-site mashup, a common storage provider can be used.
 
