@@ -44,14 +44,14 @@ First thing is to assess what we want to move to Qlik Cloud :
 
 In Qlik, we have 2 kind of integrated applications :
 - Web Apps : All the web applications in which we are using the Qlik Backend API. Here, no Qlik front-end files are used (JS or CSS).
-- Mashups : The integration of Qlik resources in web applications using Qlik Sense Capabilities API or Nebula.JS and other front-end Qlik resources as JS files and CSS.
+- Mashups : The integration of Qlik resources in web applications using API or librairies as Qlik Sense Capabilities API or Nebula.JS and other front-end Qlik resources as JS and CSS files. Embedding an IFrame in an web page is also a mashup. 
 
 Moreover, the mashup or web application can be embedded in another product.
 In this case potentential specific dependencies must be analyzed.
 
 #### Where can I host my mashups?
 The mashup or web-app must be hosted in a cloud accessible location. Qlik Cloud and the user must have access to the resources. 
-In Qlik Sense Client-Managed the mashup or web app can be hosted in your Qlik Sense Client-Managed site as well. This is not possible in Qlik Cloud.
+Even if it is not recommended for production, the mashup or web app can be hosted in your Qlik Sense Client-Managed site as well. This is not possible in Qlik Cloud.
 One possibility is to host it on a cloud provider hosting service.
 For simple use case with a static web-site mashup, a common storage provider can be used.
 
@@ -222,8 +222,28 @@ All users using the mashup or web app must be authorized in this space. Please r
 </p>
  
 > Note that in a hybrid cloud where the application is distributed from a Qlik Sense Client Managed site, the application will only be in the managed space.
+
+In a OEM context, the Qlik recommended approach to set-up a multi-tenancy is to have 1 tenant per end-customer.
+
+Users (or end-customers) are authenticated against each customer tenant.
+The Qlik applications used in the mashups or web apps have been distributed from the parent tenant to the customer tenants.
+Web apps or Mashups, hosted in a web server, embbed analytics from each tenants.
  
-The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadat including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
+One mashup can be linked to one tenant...
+ 
+ <p align="center">
+  <img src="src/img/MashupMultiTenant.png" title="hover text" align="center"/>
+</p>
+
+ ... Or it can be dynamic to centralize source code
+ 
+  <p align="center">
+  <img src="src/img/MashupMultiTenant2.png" title="hover text" align="center"/>
+</p>
+ 
+The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadata including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
+ 
+You also can get the AppId from the metadata by REST API. You can retrieve the AppId when you create the application or you can explore your [Spaces](https://qlik.dev/apis/rest/spaces) and [Items](https://qlik.dev/apis/rest/items) to reach the right application.
 
 - *Ouch! I was used to developping with the Dev-Hub!?*
 
@@ -260,9 +280,17 @@ To leverage the full potential of the platform to create complex visualizations 
 
 #### Nebula.js and Enigma.js
 
-Enigma.js and Nebula.js allows an advanced capabilities of integration
+You can improve and modernize your analytics thanks to new librairies.
+ 
+<p align="center">
+  <img src="src/img/LibrariesEvolution.png" title="hover text" align="center"/>
+</p>
+ 
+Enigma.js and Nebula.js allows an advanced capabilities of integration and framework agnostic
 - Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
 - Qlik nebula.js is an open source collection of JavaScript libraries, visualizations, and CLIs that help developers build and integrate visualizations into their own web app or build their own client extension.
+ 
+Going further to leverage more value and active intelligence from the whole Qlik Cloud platform 
 
 More info on [Qlik.Dev](https://qlik.dev/basics/integrating-qlik-objects-into-web-apps)
 
