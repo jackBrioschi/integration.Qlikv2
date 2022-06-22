@@ -229,8 +229,16 @@ Users (or end-customers) are authenticated against each customer tenant.
 The Qlik applications used in the mashups or web apps have been distributed from the parent tenant to the customer tenants.
 Web apps or Mashups, hosted in a web server, embbed analytics from each tenants.
  
+One mashup can be linked to one tenant...
+ 
  <p align="center">
   <img src="src/img/MashupMultiTenant.png" title="hover text" align="center"/>
+</p>
+
+ ... Or it can be dynamic to centralize source code
+ 
+  <p align="center">
+  <img src="src/img/MashupMultiTenant2.png" title="hover text" align="center"/>
 </p>
  
 The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadata including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
