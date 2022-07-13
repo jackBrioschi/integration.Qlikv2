@@ -28,10 +28,8 @@ There are many different ways and possibility to deploy mashup with Qlik. Start 
  * *How do I manage the authentication?*
 
  * *Which embedding strategy do I currently use?*
- <br></br>
- <p align="center">
-  <img src="src/img/analytics_modernization_flow.png" width="1000" title="hover text" align="center"/>
- </p>
+
+ ![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/analytics_modernization_flow.png)
 
 ### 1. Hosting
 
@@ -217,9 +215,7 @@ All users using the mashup or web app must be authorized in this space. Please r
 
  Here a simple application workflow in the same tenant.
 
-<p align="center">
-  <img src="src/img/QSE SaaS SDLC.png" title="hover text" align="center"/>
-</p>
+![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/QSE_SaaS_SDLC.png)
  
 > Note that in a hybrid cloud where the application is distributed from a Qlik Sense Client Managed site, the application will only be in the managed space.
 
@@ -231,15 +227,12 @@ Web apps or Mashups, hosted in a web server, embbed analytics from each tenants.
  
 One mashup can be linked to one tenant...
  
- <p align="center">
-  <img src="src/img/MashupMultiTenant.png" title="hover text" align="center"/>
-</p>
+![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/MashupMultiTenant.png)
 
  ... Or it can be dynamic to centralize source code
  
-  <p align="center">
-  <img src="src/img/MashupMultiTenant2.png" title="hover text" align="center"/>
-</p>
+![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/MashupMultiTenant2.png)
+
  
 The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadata including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
  
@@ -257,9 +250,9 @@ You can get the object id, properties, and layout of any object this way. There'
     2. Add /options/developer to the url
     3. Right click on an object and choose "Developer"
  
- <p align="center">
-  <img src="src/img/developper.png" title="hover text" align="center"/>
-</p>
+
+![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/developper.png)
+
     
  - *External tooling as a web editor?*
   
@@ -272,9 +265,9 @@ To leverage the full potential of the platform to create complex visualizations 
 
    Take a look to the new [QIX explorer](https://qixplorer.qlik.dev/) - [More info here](https://community.qlik.com/t5/Qlik-Design-Blog/Get-to-know-the-Engine-API-with-Qixplorer/ba-p/1924806)
 
- <p align="center">
-  <img src="src/img/qix.png" title="hover text" align="center"/>
-</p>
+
+![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/qix.png)
+
  
 ### Going further : Improve your embedded analytics
 
@@ -282,9 +275,8 @@ To leverage the full potential of the platform to create complex visualizations 
 
 You can improve and modernize your analytics thanks to new librairies.
  
-<p align="center">
-  <img src="src/img/LibrariesEvolution.png" title="hover text" align="center"/>
-</p>
+
+![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/LibrariesEvolution.png)
  
 Enigma.js and Nebula.js allows an advanced capabilities of integration and framework agnostic
 - Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
