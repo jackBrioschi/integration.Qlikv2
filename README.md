@@ -237,7 +237,7 @@ The application id will also change! Take a look to the URL of the application o
  
 You also can get the AppId from the metadata by REST API. You can retrieve the AppId when you create the application or you can explore your [Spaces](https://qlik.dev/apis/rest/spaces) and [Items](https://qlik.dev/apis/rest/items) to reach the right application.
 
-- *Ouch! I was used to developping with the Dev-Hub!?*
+- *Ouch! I was used to develop with the Dev-Hub!?*
 
 There is currently no Dev-Hub in Qlik Cloud. However, below some tips and tools to facilitate the move.
 
