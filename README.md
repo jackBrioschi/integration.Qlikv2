@@ -78,7 +78,7 @@ The resources location must also be updated
 
 Of course, as your Qlik applications are now hosting in a new Qlik Sense site, the Application should also be changed...
 
-All these kind of change will be details below!
+All these kind of change are detailed below!
 
 ### 2. Authentication
 Within this part, therefore, we must deal with the concept of security within the Sense platform and show you also in this case the different possibilities we have to authenticate a user to our platform. Authentication in Qlik Sense allows you to establish a user session within the platform and typically answers the question *"Who is the user"*? The authentication process requires that based on something that the user has, this allows him or her to access the platform or not. 
