@@ -1,5 +1,3 @@
-# Embedded Analytics Modernization : Moving fast to Qlik Cloud
-
 Embedded analytics seamlessly integrate analytic capabilities and content into business applications, products, websites or portals.
 It lets users quickly access relevant data and insights in their daily workflows without slowing down and switching to use a separate analytics application.
 Embedded analytics from *Qlik Sense Client Managed* site can easily be modernized by moving to *Qlik Cloud Platform.*
