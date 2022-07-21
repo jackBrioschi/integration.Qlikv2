@@ -241,7 +241,7 @@ You also can get the AppId from the metadata by REST API. You can retrieve the A
 
 There is currently no Dev-Hub in Qlik Cloud. However, below some tips and tools to facilitate the move.
 
-- *Developper mode to explore objects*
+- *Developer mode to explore objects*
 
 You can get the object id, properties, and layout of any object this way. There's also a link to open the object in single configurator, and test   exporting. The object id's are useful for embedding visualizations. The properties are useful if you are creating your own objects and want to check the properties of an object in a Qlik Sense app for reference. [More infos here](https://help.qlik.com/en-US/sense-developer/May2022/Subsystems/Extensions/Content/Sense_Extensions/Howtos/displaying-dev-tools.htm)
 
