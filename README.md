@@ -45,7 +45,7 @@ In Qlik, we have 2 kind of integrated applications :
 - Mashups : The integration of Qlik resources in web applications using API or librairies as Qlik Sense Capabilities API or Nebula.JS and other front-end Qlik resources as JS and CSS files. Embedding an IFrame in an web page is also a mashup. 
 
 Moreover, the mashup or web application can be embedded in another product.
-In this case potentential specific dependencies must be analyzed.
+In this case potential specific dependencies must be analyzed.
 
 #### Where can I host my mashups?
 The mashup or web-app must be hosted in a cloud accessible location. Qlik Cloud and the user must have access to the resources. 
