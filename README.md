@@ -225,7 +225,7 @@ Web apps or Mashups, hosted in a web server, embbed analytics from each tenants.
  
 One mashup can be linked to one tenant...
  
-![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/MashupMultiTenant.png)
+![image](https://user-images.githubusercontent.com/61158347/180393446-5dae9eff-ab47-406a-9d5f-e917ede75ae0.png)
 
  ... Or it can be dynamic to centralize source code
  
