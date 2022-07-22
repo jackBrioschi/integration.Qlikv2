@@ -123,7 +123,7 @@ If otherwise you need to embed new content (new visualizations or new sheets) vi
   * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously.
   * *sheetId* should remain the same as before.
   
- ```HTML
+ ```html
   <iframe src="https://{hostName}/sense/app/{appid}/sheet/{sheetid}/state/analysis" style="border:none;width:100%;height:100%;">
 </iframe>
 ```
