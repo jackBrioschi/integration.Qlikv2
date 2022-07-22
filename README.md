@@ -140,9 +140,10 @@ You can integrate single Qlik Sense visualizations, sheets or snapshots into an 
   * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously. 
   * *objectId* should remain the same as before.
   
-   ```html
+```html
 <iframe src="https://{hostName}/single/?appid={appId}&obj={objectId}&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"></iframe>
-   ```
+```
+
 #### Known Limitations / Considerations
 * Embedding the Hub in Qlik Cloud is not possible at the moment.
 
