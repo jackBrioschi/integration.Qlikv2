@@ -1,288 +1,740 @@
-Embedded analytics seamlessly integrate analytic capabilities and content into business applications, products, websites or portals.
-It lets users quickly access relevant data and insights in their daily workflows without slowing down and switching to use a separate analytics application.
-Embedded analytics from *Qlik Sense Client Managed* site can easily be modernized by moving to *Qlik Cloud Platform.*
+![Showdown][sd-logo]
 
-## What's the value to move your mashup on Qlik Cloud?
-
-There are many advantages we can offer for moving your embedded analytics solution to Qlik Cloud architecture:
-  * A high-performance and secure cloud architecture, scalable and elastic
-  * Seamless, continuous release of upgrades and enhancements
-  * Reduced burden on internal IT resources
-  * Improve your embedded analytics by
-    * Add value embedding new capabilities features : Alerting, Natural Language Processing, Automation,...
-    * Oppurtunity to upgrade your web integration with the lastest released libraries as Nebula.js and visualization capabilities (timeseries forecasting etc...)
-    * An easy, robust and secure cloud solution integration with for example handling CORS requests in Qlik Sense SaaS
-
-Qlik Cloud allows you to surf the wave of modern analytics, always giving you immediate access to new features and improvements. It allows you to discover new use cases, deploying to a larger population and create new business value within Qlik Active Intelligence platform.
-
-## How to move your mashup from Qlik Sense Client-Managed to Qlik Cloud?
-
-### Assess your current web integration
-Typically the three main pillars for completing an integration project concern understanding and choosing *where to host the solution*,  *how I can authenticate and authorize users* who already use the services inside my platform to be able to access the embedded analytics and which is the *web integration method* most in line with the needs I have.
-There are many different ways and possibilities to deploy mashup with Qlik. Start by asking you the right questions:
-
- * *Where my mashup or web application is hosted?*
-
- * *How do I manage the authentication?*
-
- * *Which embedding strategy do I currently use?*
-
- ![image](https://user-images.githubusercontent.com/61158347/180392326-66b8fa9d-d9c2-48ea-9ca7-32e74e04b068.png)
+Showdown is a Javascript Markdown to HTML converter, based on the original works by John Gruber. It can be used client side (in the browser) or server side (with Node or io). 
 
 
-### 1. Hosting
+# Installation
 
-#### Understand the context
+## Download tarball
 
-First thing is to assess what we want to move to Qlik Cloud : 
-- Where the analytics is embedded?
-- Which can of resources are using?
-- Where the sources are hosted?
+You can download the latest release tarball directly from [releases][releases]
 
-In Qlik, we have 2 kind of integrated applications :
-- Web Apps : All the web applications in which we are using the Qlik Backend API. Here, no Qlik front-end files are used (JS or CSS).
-- Mashups : The integration of Qlik resources in web applications using API or librairies as Qlik Sense Capabilities API or Nebula.JS and other front-end Qlik resources as JS and CSS files. Embedding an IFrame in an web page is also a mashup. 
+## Bower
 
-Moreover, the mashup or web application can be embedded in another product.
-In this case potential specific dependencies must be analyzed.
+    bower install showdown
 
-#### Where can I host my mashups?
-The mashup or web-app must be hosted in a cloud accessible location. Qlik Cloud and the user must have access to the resources. 
-Even if it is not recommended for production, in Qlik Sense Client-Managed you had the possibility to host the mashup directly on Qlik site. This is not possible in Qlik Cloud.
-One possibility is to host it on a cloud provider hosting service.
-For simple use case with a static web-site mashup, a common storage provider can be used.
+## npm (server-side)
 
-Here some examples on different cloud providers
-> **Warning : These tutorials make content available to the public internet. Please adapt the security regarding your use cases.**
-- [Hosting a static website on AWS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
-- [Hosting a static website on Azure](https://azure.microsoft.com/fr-fr/blog/static-websites-on-azure-storage-now-generally-available/)
-- [Hosting a static website on Google Cloud Platform](https://cloud.google.com/storage/docs/hosting-static-website)
+    npm install showdown
 
-#### Settings
+## CDN
 
-Moving the mashup or the web app to Qlik Cloud will have impacts in term of security and resources location.
+You can also use one of several CDNs available: 
 
-Browsers and web servers implement security policies to mitigate risks inherent with being connected to the internet. 
-Cross-Origin Resource Sharing (CORS) allows to a server to indicate the origin from which a browser should permit loading resources.
-When a web server shares a resource such as an image on its own server, it is following the same-origin policy. In this case, the resource is accessed by the same protocol, domain, and port as the server. On the other hand, a secure request for a resource from a different origin (known as a cross-origin request) requires a cross-origin resource sharing (CORS) policy. CORS allows servers to specify who (the origin) can access the assets on the server. To enable cross-origin resource sharing, the site URL that is hosting the mashup or web app must be added to a whitelist on the Qlik Sense SaaS tenant. This process of setting up the whitelist is known as web integration. Qlik Sense allows you to configure CORS policies on a per web integration basis. For example, if you have two web integrations "A" and "B", and you want both to be accessible from foo.com, you need to add foo.com to the domain whitelist of both web integrations. Web integration entities are created by the tenant admin through the management console. *From [Qlik Help Page](https://help.qlik.com/en-US/sense-developer/May2022/Subsystems/Mashups/Content/Sense_Mashups/Howtos/external-mashups-integrate-cloud.htm)*
+* rawgit CDN
 
-[Need more help on Content Security Policy?](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-administer-content-security-policy.htm)
+        https://cdn.rawgit.com/showdownjs/showdown/<version tag>/dist/showdown.min.js
 
-The resources location must also be updated
+* cdnjs
 
- ``` HTML     
-<link rel="stylesheet" href="https://www.yourtenant.eu.qlikcloud.com/resources/autogenerated/qlik-styles.css">
-<script src="https://www.yourtenant.eu.qlikcloud.com/resources/assets/external/requirejs/require.js"></script>
+        https://cdnjs.cloudflare.com/ajax/libs/showdown/<version tag>/showdown.min.js
+
+
+[sd-logo]: https://raw.githubusercontent.com/showdownjs/logo/master/dist/logo.readme.png
+[releases]: https://github.com/showdownjs/showdown/releases
+[atx]: http://www.aaronsw.com/2002/atx/intro
+[setext]: https://en.wikipedia.org/wiki/Setext
+
+---------
+
+# Syntax
+
+
+## Table of contents
+
+- [Introduction](#introduction)
+- [Paragraphs](#paragraphs)
+- [Headings](#headings)
+    * [Atx Style](#atx-style)
+    * [Setext style](#setext-style)
+    * [Header IDs](#header-ids)
+- [Blockquotes](#blockquotes)
+- [Bold and Italic](#bold-and-italic)
+- [Strikethrough](#strikethrough)
+- [Emojis](#emojis)
+- [Code formatting](#code-formatting)
+    * [Inline formats](#inline-formats)
+    * [Multiple lines](#multiple-lines)
+- [Lists](#lists)
+    * [Unordered lists](#unordered-lists)
+    * [Ordered lists](#ordered-lists)
+    * [TaskLists (GFM Style)](#tasklists--gfm-style-)
+    * [List syntax](#list-syntax)
+    * [Nested blocks](#nested-blocks)
+    * [Nested lists](#nested-lists)
+    * [Nested code blocks](#nested-code-blocks)
+- [Links](#links)
+    * [Simple](#simple)
+    * [Inline](#inline)
+    * [Reference Style](#reference-style)
+- [Images](#images)
+    * [Inline](#inline-1)
+    * [Reference Style](#reference-style-1)
+    * [Image dimensions](#image-dimensions)
+    * [Base64 encoded images](#base64-encoded-images)
+- [Tables](#tables)
+- [Mentions](#mentions)
+- [Handling HTML in markdown documents](#handling-html-in-markdown-documents)
+- [Escaping entities](#escaping-entities)
+    * [Escaping markdown entities](#escaping-markdown-entities)
+    * [Escaping html tags](#escaping-html-tags)
+- [Known differences and Gotchas](#known-differences-and-gotchas)
+
+## Introduction
+
+Showdown was created by John Fraser as a direct port of the original parser written by markdown's creator, John Gruber. Although Showdown has evolved since its inception, in "vanilla mode", it tries to follow the [original markdown spec][md-spec] (henceforth refereed as vanilla) as much as possible. There are, however, a few important differences, mainly due to inconsistencies in the original spec, which we addressed following the author's advice as stated in the [markdown's "official" newsletter][md-newsletter].
+
+Showdown also support "extra" syntax not defined in the original spec as opt-in features. This means new syntax elements are not enabled by default and require users to enable them through options.
+
+This document provides a quick description the syntax supported and the differences in output from the original markdown.pl implementation.
+
+## Paragraphs
+
+Paragraphs in Showdown are just **one or more lines of consecutive text** followed by one or more blank lines.
+
+```md
+On July 2, an alien mothership entered Earth's orbit and deployed several dozen 
+saucer-shaped "destroyer" spacecraft, each 15 miles (24 km) wide.
+    
+On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, 
+participated in an assault on a destroyer near the city of Los Angeles.
 ```
 
-Of course, as your Qlik applications are now hosting in a new Qlik Sense site, the Application should also be changed...
+The implication of the “one or more consecutive lines of text” is that Showdown supports 
+“hard-wrapped” text paragraphs. This means the following examples produce the same output:
 
-All these kind of change are detailed below!
-
-### 2. Authentication
-Within this part, therefore, we must deal with the concept of security within the Sense platform and show you also in this case the different possibilities we have to authenticate a user to our platform. Authentication in Qlik Sense allows you to establish a user session within the platform and typically answers the question *"Who is the user"*? The authentication process requires that based on something that the user has, this allows him or her to access the platform or not. 
-In Qlik Sense Cloud, as well as in Qlik Sense Client-Managed, you can use an already existing identity provider (IdP) when setting up your deployment. For more information regarding this part, please visit [Authentication for Qlik Cloud Mashup](https://github.com/apamo/QlikSenseCM2SaaS/blob/main/introduction%20to%20Qlik%20Sense%20SaaS%20security.md)
-
-### 3. Embedding Strategy 
-How to modernize your embedded analytics with Qlik? 
-As you are probably already aware, we offer different methods and levels of integration, each one with a different complexity.
-Which one is right for your needs depends on the design requirements you have. 
-In relation to Embedded Analytics with Qlik, we basically offer four different types of embedding strategies:
- * **Iframe Integration**
- * **Div-Tag Integration**
- * **On the fly**
- * **Data Only**
- 
-Can I maintain the same embedding strategies I adopted on Qlik Sense Client Managed on my new Qlik Cloud platform? **Yes, of course you can!**.
-You just need to be aware about some small differences there are between the two different platforms in terms of embedding. 
-Let's see them in details in the next sections where we assume you are already aware and you already know the embedding strategies you are currently using.
-If this is not the case, we invite you to see the section [Web Integration With Qlik] where you can start from scratch and choose the best integration method that fits with your needs.
-In any case, as you will be able to see in the following sections, everything can be done by calling the Qlik native APIs included within the standard product in SaaS.
-
-### Iframe Integration
-
-#### Introduction
-Converting your Integration via Iframe from Qlik Sense Enterprise on Windows to Qlik Cloud Services is fairly straightforward. 
-To convert your existing Iframe Integration to Qlik SaaS, please follow the steps below.
-
-#### Prerequisites
-Before performing any kind of integration via Iframe, **Content Security Policy (CSP)** needs to be properly configured.
-Every Qlik Sense SaaS tenant explicitly states in its CSP header that an iframe can only be displayed by “self” which is the Qlik Sense SaaS tenant itself. Unlike in some cases on Qlik Sense Client-Managed, the Qlik Sense SaaS tenant and your web app server are two separate entities, meaning Qlik's CSP policy blocks the access of objects in other domains for a security precaution. If content security policy is not configured ,the browser throws an error because it's unable to display the iframe. Please for more details regarding *Content Security Policy(CSP)* and how to properly configure it to correctly load an iframe from Qlik Sense Saas, visit [this page on qlik.dev](https://qlik.dev/tutorials/csp---what-is-it-and-how-to-use-it)
-
-#### How to do it
- Once pre-requisites are met, there are three different possibilities to embed Qlik Cloud content using Iframe: Embed an entire app, a single sheet or embed an existing visualization object. 
- The APIs to be used are the same you've already used on the client-managed platform, i.e.[App Integration APIs](https://qlik.dev/apis/javascript/app-integration) or [Single Integration APIs](https://qlik.dev/apis/javascript/single-integrations).
- 
-You can then easily migrate from a Qlik Sense on Windows Iframe integration to Qlik Cloud by only changing the *hostName* and the *appId* inside the iFrame URL. 
-*Do I need to change also sheetId and objects Id?* Well, if you migrated correctly the app into Qlik Sense SaaS, the ids of these objects should remain the same.
-If otherwise you need to embed new content (new visualizations or new sheets) via iFrame that didn't exist before inside the former Qlik app, please go to [this section](https://github.com/jackBrioschi/integration.Qlikv2/tree/Jack) to see how to generate the correct Iframe URL to perform the integration.
-
-  ##### Entire App (App Integration APIs)
-  The App Integration API provides parameters that can be used to create a URL that returns a complete HTML page containing the embedded app. This URL can be embedded in a web page, for example by including it in an iFrame.
-  * Just replace your old *hostName* (former Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*). 
-  * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously.
-  * *sheetId* should remain the same as before.
-  
- ```html
-  <iframe src="https://{hostName}/sense/app/{appid}/sheet/{sheetid}/state/analysis" style="border:none;width:100%;height:100%;">
-</iframe>
+```md
+A very long line of text
 ```
 
-  ##### Single Sheet (Single Integration APIs)
-You can integrate single Qlik Sense visualizations, sheets or snapshots into an iframe. You use the Single Integration API to define how the object should be integrated into your web site.
-  * Just replace your old *hostName* (former Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*). 
-  * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously.
-  * *sheetId* should remain the same as before.
+```md
+A very
+long line
+of text
+```
 
-   ```HTML
-  <iframe src="https://{hostName}/single/?appid={appId}&sheet={sheetid}&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;">
-</iframe>
-   ```
-  ##### Single Object (Single Integration APIs)
-  * Replace your old *hostName* (old Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*).
-  * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously. 
-  * *objectId* should remain the same as before.
-  
-   ```HTML
-  <iframe src="https://{hostName}/single/?appid={appId}&obj={objectId}&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"> </iframe>
-   ```
-#### Known Limitations / Considerations
-* Embedding the Hub in Qlik Cloud is not possible at the moment.
+If you DO want to add soft line breaks (which translate to `<br>` in HTML) to a paragraph, 
+you can do so by adding 3 space characters to the end of the line (`  `).
 
+You can also force every line break in paragraphs to translate to `<br>` (as Github does) by
+enabling the option **`simpleLineBreaks`**.
 
-### Javascript Integration (Div-Tag, On-The-Fly, Data Only)
+## Headings
 
-#### Introduction
-In this section we are going to describe how to adapt your existing mashup based on [Capability APIs](https://qlik.dev/apis/javascript/capabilities) to be moved to Qlik Cloud. Please note that we have also another Javascript library available for Embedded Analytics use case that is **Nebula.js**. This is a collection of product and framework agnostic JavaScript libraries and APIs that helps developers integrate visualizations and mashups on top of the Qlik associative engine. It offers developers a modern alternative to the capability APIs. If you are interested to convert your existing mashup to Nebula.js please go to [this section](https://github.com/jackBrioschi/integration.Qlikv2/tree/Jack). Otherwise, if you are just interested to adapt your Capability APIs mashup to Qlik Cloud, continue in the below sections.
+### Atx Style
 
-#### Prerequisites
-In order to correctly perform an integration using Javascript APIs, a new **web integration id** has to be created from the Qlik Cloud management console.
-You can create web integrations to add origins that are allowlisted to access the tenant. The web integration containing the allow list is connected to an ID used for example in a mashup that is connecting to your tenant. When a request arrives, Qlik Sense confirms that the request derives from an allowlisted domain and then approves the request, else not.
-Make sure you add the source that hosts the mashup to your whitelist while creating a new web Integration ID.
+You can create a heading by adding one or more # symbols before your heading text. The number of # you use will determine the size of the heading. This is similar to [**atx style**][atx].
 
-#### How to do it
-In order to move your existing Div Tag integration from Qlik Sense Enterprise on Windows to Qlik Sense Enterprise SaaS, we need to make a set of small changes to the config settings and the source of Qlik libraries we are loaded to perform the integration. 
-**The core part of the integration using capabilities APIs remains unchanged** as the same library is available on Qlik Cloud.
+```md
+# The largest heading (an <h1> tag)
+## The second largest heading (an <h2> tag)
+…
+###### The 6th largest heading (an <h6> tag)
+```
 
-The adaptation we need to make can be summarized in the following steps:
+The space between `#` and the heading text is not required but you can make that space mandatory by enabling the option **`requireSpaceBeforeHeadingText`**.
 
-* **Change Config settings**, in particular:
-  * **Change the references of the actual Qlik associative engine connection**, which is used when you open an app or get a list of apps. This is covered by the config JavaScript object, used as a parameter in the openApp call.
-  * To define where the **Qlik Sense client-side software and files should be loaded from**. This is achieved by configuring RequireJS with the require.config call and setting the baseUrl.
-  * **To define the web integration ID**, which is necessary to enable cross-domain resource sharing.
+You can wrap the headings in `#`. Both leading and trailing `#` will be removed.
 
-  ```javascript
-    const config = {
-      host: 'your-tenant.eu.qlikcloud.com',        //for example, 'abc.eu.qlikcloud.com'
-      prefix: '/',
-      port: 443,
-      isSecure: true,
-      webIntegrationId: 'web-integration-id-here',  //paste here the web integration id you've created in the pre-reqs section
-    };
-    require.config({
-      baseUrl: `https://${config.host}/resources`,
-      webIntegrationId: config.webIntegrationId,
-    });
-  ```
-* **Connect to the right Qlik Sense Cloud app** containing the objects you want to display on your web page.
-   ```javascript
-     const app = qlik.openApp('AppId', config); // Replace the former 'AppId' with the new appId of the app imported in the cloud tenant
-   ```
-   If you properly performed the app migration to Qlik Cloud, the objects id in the subsequents getObject calls *app.getObject('divID','objectId');*, should remain the same as the former Qlik Sense on Windows app.
+```md
+## My Heading ##
+```
 
-* **Change the location to load both qlik-styles.css and require.js**. Replace the relationship between the current html document and the linked Qlik Sense defined style sheet in <link/> rel tag inside the <head/> of the HTML file, together with the link to require.js module loader loaded through the <script> tag.
- Replace both qlik-styles.css and require.js location inside the main .html file where these resources are loaded.
-    ```HTML
-       <link rel="stylesheet" href="https://your-tenant.eu.qlikcloud.com/resources/autogenerated/qlik-styles.css" />
-       <script src="https://your-tenant.eu.qlikcloud.com/resources/assets/external/requirejs/require.js"></script>
+If, for some reason, you need to keep a leading or trailing `#`, you can either add a space or escape it:
+
+```md
+# # My header # #
+
+#\# My Header \# #
+```
+
+### Setext style
+
+You can also use [**setext style**][setext] headings, although only two levels are available.
+
+```md
+This is an H1
+=============
+    
+This is an H2
+-------------
+```
+
+**Note:**    
+In live preview editors, when a paragraph is followed by a list it can cause an awkward effect.
+
+![awkward effect][]
+
+You can prevent this by enabling the option **`smoothPreview`**.
+
+### Header IDs
+
+Showdown generates bookmarks anchors in titles automatically, by adding an id property to an heading.
+
+```md
+# My cool header with ID
+```
+
+```html
+<h1 id="mycoolheaderwithid">My cool header with ID</h1>
+```
+
+This behavior can be modified with options:
+
+ - **`noHeaderId`** disables automatic id generation; 
+ - **`ghCompatibleHeaderId`** generates header ids compatible with github style (spaces are replaced with dashes and a bunch of non alphanumeric chars are removed)
+ - **`prefixHeaderId`** adds a prefix to the generated header ids (either automatic or custom).
+ - **`headerLevelStart`** sets the header starting level. For instance, setting this to 3 means that `# header` will be converted to `<h3>`.
+
+Read the [README.md][readme] for more info
+
+## Blockquotes
+
+You can indicate blockquotes with a >.
+
+```md
+In the words of Abraham Lincoln:
+    
+> Pardon my french
+```
+
+Blockquotes can have multiple paragraphs and can have other block elements inside.
+
+```md
+> A paragraph of text
+>
+> Another paragraph
+>
+> - A list
+> - with items
+```
+
+## Bold and Italic
+
+You can make text bold or italic.
+
+    *This text will be italic*
+    **This text will be bold**
+
+Both bold and italic can use either a \* or an \_ around the text for styling. This allows you to combine both bold and italic if needed.
+
+    **Everyone _must_ attend the meeting at 5 o'clock today.**
+
+## Strikethrough
+
+With the option **`strikethrough`** enabled, Showdown supports strikethrough elements.
+The syntax is the same as GFM, that is, by adding two tilde (`~~`) characters around
+a word or groups of words.
+
+```md
+a ~~strikethrough~~ element
+```
+
+a ~~strikethrough~~ element
+
+## Emojis
+
+Since version 1.8.0, showdown supports github's emojis. A complete list of available emojis can be foun [here][emoji list].
+
+```md
+this is a :smile: smile emoji
+```
+
+this is a :smile: smile emoji
+
+## Code formatting
+
+### Inline formats
+
+Use single backticks (`) to format text in a special monospace format. Everything within the backticks appear as-is, with no other special formatting.
+
+```md
+Here's an idea: why don't we take `SuperiorProject` and turn it into `**Reasonable**Project`.
+```
+
+```html
+<p>Here's an idea: why don't we take <code>SuperiorProject</code> and turn it into <code>**Reasonable**Project</code>.</p>
+```
+
+### Multiple lines
+
+To create blocks of code you should indent it by four spaces.
+
+```md
+    this is a piece
+    of
+    code
+```
+
+If the options **`ghCodeBlocks`** is activated (which is by default), you can use triple backticks (```) to format text as its own distinct block.
+
+    Check out this neat program I wrote:
 
     ```
+    x = 0
+    x = 2 + 2
+    what is x
+    ```
 
- 
-#### Known Limitations / Considerations
-If you are using extensions in your Qlik Apps, you need to load them from the Management Console of your tenant. Please before doing it, check out [this page](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-extensions.htm) before importing them into Qlik Cloud where you can find requirements for extensions compatibility in Qlik Cloud.
+## Lists
 
- ## Others changes? Tips & Tricks
+Showdown supports ordered (numbered) and unordered (bulleted) lists.
 
-- *Where my application must be published?*
+### Unordered lists
 
-In most of the case the existing Qlik application will be imported or distributed on Qlik Cloud.
-We recommend to use an application from a managed space in your Mashup. Managed spaces are commonly used for governed content.
-The security implemented for this space and application will define who can access to the application.
-All users using the mashup or web app must be authorized in this space. Please refer how to [manage permission in a managed space for more information](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Spaces/managing-managed-spaces.htm)
+You can make an unordered list by preceding list items with either a *, a - or a +. Markers are interchangeable too.
 
- Here a simple application workflow in the same tenant.
+```md
+* Item
++ Item
+- Item
+```
 
-![image](https://user-images.githubusercontent.com/61158347/180393261-714a754a-b8ce-4526-b705-13057cde9744.png)
- 
-> Note that in a hybrid cloud where the application is distributed from a Qlik Sense Client Managed site, the application will only be in the managed space.
+### Ordered lists
 
-In a OEM context, the Qlik recommended approach to set-up a multi-tenancy is to have 1 tenant per end-customer.
+You can make an ordered list by preceding list items with a number.
 
-Users (or end-customers) are authenticated against each customer tenant.
-The Qlik applications used in the mashups or web apps have been distributed from the parent tenant to the customer tenants.
-Web apps or Mashups, hosted in a web server, embbed analytics from each tenants.
- 
-One mashup can be linked to one tenant...
- 
-![image](https://user-images.githubusercontent.com/61158347/180393446-5dae9eff-ab47-406a-9d5f-e917ede75ae0.png)
+```md
+1. Item 1
+2. Item 2
+3. Item 3
+```
 
- ... Or it can be dynamic to centralize source code
- 
-![image](https://user-images.githubusercontent.com/61158347/180393578-07bd85ac-0da4-4944-8027-e024b9563cfb.png)
+It’s important to note that the actual numbers you use to mark the list have no effect on the HTML output Showdown produces. So you can use the same number in all items if you wish to.
 
- 
-The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadata including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
- 
-You also can get the AppId from the metadata by REST API. You can retrieve the AppId when you create the application or you can explore your [Spaces](https://qlik.dev/apis/rest/spaces) and [Items](https://qlik.dev/apis/rest/items) to reach the right application.
+### TaskLists (GFM Style)
 
-- *Ouch! I was used to develop with the Dev-Hub!?*
+Showdown also supports GFM styled takslists if the **`tasklists`** option is enabled.
 
-There is currently no Dev-Hub in Qlik Cloud. However, below some tips and tools to facilitate the move.
+```md
+ - [x] checked list item
+ - [ ] unchecked list item
+``` 
 
-- *Developer mode to explore objects*
+ - [x] checked list item
+ - [ ] unchecked list item
 
-You can get the object id, properties, and layout of any object this way. There's also a link to open the object in single configurator, and test   exporting. The object id's are useful for embedding visualizations. The properties are useful if you are creating your own objects and want to check the properties of an object in a Qlik Sense app for reference. [More infos here](https://help.qlik.com/en-US/sense-developer/May2022/Subsystems/Extensions/Content/Sense_Extensions/Howtos/displaying-dev-tools.htm)
+### List syntax
 
-    1. Open a sheet in a Qlik Sense app in your browser
-    2. Add /options/developer to the url
-    3. Right click on an object and choose "Developer"
- 
+List markers typically start at the left margin, but may be indented by up to three spaces. 
 
-![image](https://user-images.githubusercontent.com/61158347/180393746-88e0ea9c-b44d-44b9-92ff-e344489bbfce.png)
+```md
+   * this is valid
+   * this is too  
+```
 
-    
- - *External tooling as a web editor?*
-  
-There is no mashup editor in Qlik SaaS. There are plenty of tools for web development as *Glitch* where you can experiment easily.
-Follow [Qlik on Glitch](https://glitch.com/@qlik) for mashups example and to be inspired
-  
-- *New Qix Explorer to interact with the Qlik Engine*
+List markers must be followed by one or more spaces or a tab.
 
-To leverage the full potential of the platform to create complex visualizations or satisfy custom development needs, understanding the Engine API is fundamental to taking advantage of what Qlik Sense hides under the hood.
+To make lists look nice, you can wrap items with hanging indents:
 
-   Take a look to the new [QIX explorer](https://qixplorer.qlik.dev/) - [More info here](https://community.qlik.com/t5/Qlik-Design-Blog/Get-to-know-the-Engine-API-with-Qixplorer/ba-p/1924806)
+```md
+*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+    viverra nec, fringilla in, laoreet vitae, risus.
+*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+    Suspendisse id sem consectetuer libero luctus adipiscing.
+```
+
+But if you want to be lazy, you don’t have to
+
+If one list item is separated by a blank line, Showdown will wrap all the list items in `<p>` tags in the HTML output.
+So this input:
+
+```md
+* Bird
+
+* Magic
+* Johnson
+```
+
+Results in:
+
+```html
+<ul>
+<li><p>Bird</p></li>
+<li><p>Magic</p></li>
+<li><p>Johnson</p></li>
+</ul>
+```
+
+This differs from other markdown implementations such as GFM (github) or commonmark.  
+
+### Nested blocks
+
+List items may consist of multiple paragraphs. Each subsequent paragraph in a list item must be indented by either 4 spaces or one tab:
+
+```md
+1.  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
+
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
+
+2.  Suspendisse id sem consectetuer libero luctus adipiscing.
+```
+
+This is valid for other block elements such as blockquotes:
+
+```md
+*   A list item with a blockquote:
+
+    > This is a blockquote
+    > inside a list item.
+```
+
+or event other lists.
+
+### Nested lists
+
+You can create nested lists by indenting list items by **four** spaces.
+
+```md
+1.  Item 1
+    1. A corollary to the above item.
+    2. Yet another point to consider.
+2.  Item 2
+    * A corollary that does not need to be ordered.
+    * This is indented four spaces
+    * You might want to consider making a new list.
+3.  Item 3
+```
+
+This behavior is consistent with the original spec but differs from other implementations such as GFM or commonmark. Prior to version 1.5, you just needed to indent two spaces for it to be considered a sublist.
+You can disable the **four spaces requirement** with option **`disableForced4SpacesIndentedSublists`**
+
+To nest a third (or more) sublist level, you need to indent 4 extra spaces (or 1 extra tab) for each level.
+
+```md
+1.  level 1
+    1.  Level 2
+        *   Level 3
+    2.  level 2
+        1.  Level 3
+1.  Level 1
+```
+
+### Nested code blocks
+
+You can nest fenced codeblocks the same way you nest other block elements, by indenting by fours spaces or a tab:
+
+```md
+1.  Some code:
+
+    ```js
+    var foo = 'bar';
+    console.log(foo);
+    ```
+```
+
+To put a *indented style* code block within a list item, the code block needs to be indented twice — 8 spaces or two tabs:
+
+```md
+1.  Some code:
+
+    var foo = 'bar';
+    console.log(foo);
+```
+
+## Links
+
+### Simple
+
+If you wrap a valid URL or email in `<>` it will be turned into a link whose text is the link itself.
+
+```md
+link to <http://www.google.com/>
+
+this is my email <somedude@mail.com>
+```
+
+In the case of email addreses, Showdown will also perform a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots.
+You can disable this obfuscation setting **`encodeEmails`** option to `false`.
+
+With the option **`simplifiedAutoLink`** enabled, Showdown will automagically turn every valid URL it finds in the text body to links for you, without the need to wrap them in `<>`.
+
+```md
+link to http://www.google.com/
+
+this is my email somedude@mail.com
+```
+
+### Inline
+
+You can create an inline link by wrapping link text in brackets ( `[ ]` ), and then wrapping the link in parentheses ( `( )` ).
+
+For example, to create a hyperlink to github.com/showdownjs/showdown, with a link text that says, Get Showdown!, you'd write this in Markdown: `[Get Showdown!](https://github.com/showdownjs/showdown)`.
+
+### Reference Style
+
+You can also use the reference style, like this:
+
+```md
+this is a [link to google][1]
+
+[1]: www.google.com
+```
+
+Showdown also supports implicit link references:
+
+```md
+this is a link to [google][]
+
+[google]: www.google.com
+```
+
+## Images
+
+Markdown uses an image syntax that is intended to resemble the syntax for links, also allowing for two styles: inline and reference.
+
+### Inline
+
+Inline image syntax looks like this:
+
+```md
+![Alt text](url/to/image)
+
+![Alt text](url/to/image "Optional title")
+```
+
+That is:
+
+ + An exclamation mark: !;
+ + followed by a set of square brackets, containing the alt attribute text for the image;
+ + followed by a set of parentheses, containing the URL or path to the image, and an optional title attribute enclosed in double or single quotes.
 
 
-![image](https://user-images.githubusercontent.com/61158347/180393819-a7b3633d-7b54-46c7-b54c-ef76009819ab.png)
+### Reference Style
 
- 
-### Going further : Improve your embedded analytics
+Reference-style image syntax looks like this:
 
-#### Nebula.js and Enigma.js
+```md
+![Alt text][id]
+```
 
-You can improve and modernize your analytics thanks to new librairies.
- 
+Where “id” is the name of a defined image reference. Image references are defined using syntax identical to link references:
 
-![image](https://user-images.githubusercontent.com/61158347/180393900-402af162-2eb7-4c2a-96aa-1421e7de2795.png)
- 
-Enigma.js and Nebula.js allows an advanced capabilities of integration and framework agnostic
-- Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
-- Qlik nebula.js is an open source collection of JavaScript libraries, visualizations, and CLIs that help developers build and integrate visualizations into their own web app or build their own client extension.
- 
-Going further to leverage more value and active intelligence from the whole Qlik Cloud platform 
+```md
+[id]: url/to/image  "Optional title attribute"
+```
 
-More info on [Qlik.Dev](https://qlik.dev/basics/integrating-qlik-objects-into-web-apps)
+Implicit references are also supported in images, similar to what happens with links:
+
+```md
+![showdown logo][]
+
+[showdown logo]: http://showdownjs.github.io/demo/img/editor.logo.white.png
+```
+
+### Image dimensions
+
+When the option **`parseImgDimension`** is activated, you can also define the image dimensions, like this:
+
+```md
+![Alt text](url/to/image =250x250 "Optional title")
+```
+
+or in reference style:
+
+```md
+![Alt text][id]
+
+[id]: url/to/image =250x250
+```
+
+### Base64 encoded images
+
+Showdown also supports Base64 encoded images, both reference and inline style.
+**Since version 1.7.4**, wrapping base64 strings, which are usually extremely long lines of text, is supported.
+You can add newlines arbitrarily, as long as they are added after the `,` character.
+
+**inline style**
+```md
+![Alt text](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAY
+SURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=)
+```
+
+**reference style**
+```md
+![Alt text][id]
+
+[id]:
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7D
+AcdvqGQAAAAYSURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=
+```
+
+Please note that with reference style base64 image sources, regardless of "wrapping", a double newline is needed after the base64 string to separate them from a paragraph or other text block (but references can be adjacent).
+
+**wrapped reference style**
+```md
+![Alt text][id]
+![Alt text][id2]
+
+[id]:
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7D
+AcdvqGQAAAAYSURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=
+[id2]:
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7D
+AcdvqGQAAAAYSURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=
+
+this text needs to be separated from the references by 2 newlines
+```
 
 
+## Tables
 
+Tables aren't part of the core Markdown spec, but they are part of GFM and Showdown supports them by turning on the option `tables`.
+
+Colons can be used to align columns.
+
+In the new version, the outer pipes (`|`) are optional, matching GFM spec. 
+
+You also don't need to make the raw Markdown line up prettily.
+
+You can also use other markdown syntax inside them.
+
+```md
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| **col 3 is**  | right-aligned | $1600 |
+| col 2 is      | *centered*    |   $12 |
+| zebra stripes | ~~are neat~~  |    $1 |
+```
+
+## Mentions
+
+Showdown supports github mentions by enabling the option **`ghMentions`**. This will turn every `@username` into a link to their github profile.
+
+```md
+hey @tivie, check this out
+```
+
+Since version 1.6.2 you can customize the generated link in mentions with the option **`ghMentionsLink`**.
+For instance, setting this option to `http://mysite.com/{u}/profile`:
+
+```html
+<p>hey <a href="http://mysite.com/tivie/profile">@tivie</a>, check this out</p>
+```
+
+## Handling HTML in markdown documents
+
+Showdown, in most cases, leaves HTML tags alone, leaving them untouched in the output document.
+
+```md
+some markdown **here**
+<div>this is *not* **parsed**</div>
+```
+
+```html
+<p>some markdown <strong>here</strong></p>
+<div>this is *not* **parsed**</div>
+```
+
+However, there are exceptions to this. With `<code>` and `<pre><code>` tags, their contents are always escaped.
+
+```md
+some markdown **here** with <code>foo & bar <baz></baz></code>
+```
+
+ ```html
+<p>some markdown <strong>here</strong> with <code>foo &amp; bar &lt;baz&gt;&lt;/baz&gt;</code></p>
+``` 
+
+If you wish to enable markdown parsing inside a specific HTML tag, you can enable it by using the html attribute **`markdown`** or  **`markdown="1"`**  or **`data-markdown="1"`**.
+
+```md
+some markdown **here**
+<div markdown="1">this is *not* **parsed**</div>
+```
+
+```html
+<p>some markdown <strong>here</strong></p>
+<div markdown="1"><p>this is <em>not</em> <strong>parsed</strong></p></div>
+```
+
+## Escaping entities
+
+### Escaping markdown entities
+
+Showdown allows you to use backslash (`\`) escapes to generate literal characters which would otherwise have special meaning in markdown’s syntax. For example, if you wanted to surround a word with literal underscores (instead of an HTML `<em>` tag), you can use backslashes before the unserscores, like this:
+
+```md
+\_literal underscores\_
+```
+
+Showdown provides backslash escapes for the following characters:
+
+```
+\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark
+```
+
+### Escaping HTML tags
+
+Since [version 1.7.2](https://github.com/showdownjs/showdown/tree/1.7.2) backslash escaping HTML tags is supported when `backslashEscapesHTMLTags` option is enabled.
+
+```md
+\<div>a literal div\</div>
+``` 
+
+## Known differences and Gotchas
+
+In most cases, Showdown's output is identical to that of Perl Markdown v1.0.2b7.  What follows is a list of all known deviations.  Please file an issue if you find more.
+
+* **Since version 1.4.0, showdown supports the markdown="1" attribute**, but for older versions, this attribute is ignored. This means:
+
+        <div markdown="1">
+             Markdown does *not* work in here.
+        </div>
+
+
+* You can only nest square brackets in link titles to a depth of two levels:
+
+        [[fine]](http://www.github.com/)
+        [[[broken]]](http://www.github.com/)
+
+    If you need more, you can escape them with backslashes.
+
+
+* A list is **single paragraph** if it has only **1 line-break separating items** and it becomes **multi paragraph if ANY of its items is separated by 2 line-breaks**:
+
+   ```md
+    - foo
+   
+    - bar
+    - baz
+   ```
+   becomes
+
+    ```html
+    <ul>
+      <li><p>foo</p></li>
+      <li><p>bar</p></li>
+      <li><p>baz</p></li>
+    </ul>
+    ```
+
+This new ruleset is based on the comments of Markdown's author John Gruber in the [Markdown discussion list][md-newsletter].
+
+[md-spec]: http://daringfireball.net/projects/markdown/
+[md-newsletter]: https://pairlist6.pair.net/mailman/listinfo/markdown-discuss
+[atx]: http://www.aaronsw.com/2002/atx/intro
+[setext]: https://en.wikipedia.org/wiki/Setext
+[readme]: https://github.com/showdownjs/showdown/blob/master/README.md
+[awkward effect]: http://i.imgur.com/YQ9iHTL.gif
+[emoji list]: https://github.com/showdownjs/showdown/wiki/emojis
