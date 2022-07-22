@@ -274,7 +274,7 @@ To leverage the full potential of the platform to create complex visualizations 
 You can improve and modernize your analytics thanks to new librairies.
  
 
-![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/LibrariesEvolution.png)
+![image](https://user-images.githubusercontent.com/61158347/180393900-402af162-2eb7-4c2a-96aa-1421e7de2795.png)
  
 Enigma.js and Nebula.js allows an advanced capabilities of integration and framework agnostic
 - Enigma.js is a wrapper library that makes communicating with the engine easier with JavaScript rather than using the straight websockets.
