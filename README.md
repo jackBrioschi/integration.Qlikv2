@@ -213,7 +213,7 @@ All users using the mashup or web app must be authorized in this space. Please r
 
  Here a simple application workflow in the same tenant.
 
-![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/QSE_SaaS_SDLC.png)
+![image](https://user-images.githubusercontent.com/61158347/180393261-714a754a-b8ce-4526-b705-13057cde9744.png)
  
 > Note that in a hybrid cloud where the application is distributed from a Qlik Sense Client Managed site, the application will only be in the managed space.
 
