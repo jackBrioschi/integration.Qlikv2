@@ -195,7 +195,7 @@ The adaptation we need to make can be summarized in the following steps:
 <script src="https://your-tenant.eu.qlikcloud.com/resources/assets/external/requirejs/require.js"></script>
 ```
  
-#### Known Limitations / Considerations
+ #### Known Limitations / Considerations
 If you are using extensions in your Qlik Apps, you need to load them from the Management Console of your tenant. Please before doing it, check out [this page](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-extensions.htm) before importing them into Qlik Cloud where you can find requirements for extensions compatibility in Qlik Cloud.
 
  ## Others changes? Tips & Tricks
@@ -279,6 +279,3 @@ Enigma.js and Nebula.js allows an advanced capabilities of integration and frame
 Going further to leverage more value and active intelligence from the whole Qlik Cloud platform 
 
 More info on [Qlik.Dev](https://qlik.dev/basics/integrating-qlik-objects-into-web-apps)
-
-
-
