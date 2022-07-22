@@ -229,7 +229,7 @@ One mashup can be linked to one tenant...
 
  ... Or it can be dynamic to centralize source code
  
-![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/MashupMultiTenant2.png)
+![image](https://user-images.githubusercontent.com/61158347/180393578-07bd85ac-0da4-4944-8027-e024b9563cfb.png)
 
  
 The application id will also change! Take a look to the URL of the application or click on ... of the application thumbtail, then *Details* to get access to the app metadata including the AppId. As in Qlik Sense Client-Managed, objectId should stay similar.
