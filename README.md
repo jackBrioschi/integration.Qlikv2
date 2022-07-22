@@ -27,6 +27,6 @@ There are many different ways and possibilities to deploy mashup with Qlik. Star
 
  * *Which embedding strategy do I currently use?*
 
- ![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/analytics_modernization_flow.png)
+![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/analytics_modernization_flow.png)
 
 
