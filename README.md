@@ -264,7 +264,7 @@ To leverage the full potential of the platform to create complex visualizations 
    Take a look to the new [QIX explorer](https://qixplorer.qlik.dev/) - [More info here](https://community.qlik.com/t5/Qlik-Design-Blog/Get-to-know-the-Engine-API-with-Qixplorer/ba-p/1924806)
 
 
-![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/qix.png)
+![image](https://user-images.githubusercontent.com/61158347/180393819-a7b3633d-7b54-46c7-b54c-ef76009819ab.png)
 
  
 ### Going further : Improve your embedded analytics
