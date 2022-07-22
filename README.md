@@ -249,7 +249,7 @@ You can get the object id, properties, and layout of any object this way. There'
     3. Right click on an object and choose "Developer"
  
 
-![image](https://github.com/jackBrioschi/integration.Qlikv2/blob/main/src/img/developper.png)
+![image](https://user-images.githubusercontent.com/61158347/180393746-88e0ea9c-b44d-44b9-92ff-e344489bbfce.png)
 
     
  - *External tooling as a web editor?*
