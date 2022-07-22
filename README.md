@@ -68,6 +68,10 @@ When a web server shares a resource such as an image on its own server, it is fo
 
 [Need more help on Content Security Policy?](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-administer-content-security-policy.htm)
 
+```html
+<h1 id="mycoolheaderwithid">My cool header with ID</h1>
+```
+
 The resources location must also be updated
 
 ```html   
