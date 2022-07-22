@@ -116,8 +116,8 @@ You can then easily migrate from a Qlik Sense on Windows Iframe integration to Q
 *Do I need to change also sheetId and objects Id?* Well, if you migrated correctly the app into Qlik Sense SaaS, the ids of these objects should remain the same.
 If otherwise you need to embed new content (new visualizations or new sheets) via iFrame that didn't exist before inside the former Qlik app, please go to [this section](https://github.com/jackBrioschi/integration.Qlikv2/tree/Jack) to see how to generate the correct Iframe URL to perform the integration.
 
-  ##### Entire App (App Integration APIs)
-  The App Integration API provides parameters that can be used to create a URL that returns a complete HTML page containing the embedded app. This URL can be embedded in a web page, for example by including it in an iFrame.
+##### Entire App (App Integration APIs)
+The App Integration API provides parameters that can be used to create a URL that returns a complete HTML page containing the embedded app. This URL can be embedded in a web page, for example by including it in an iFrame.
   * Just replace your old *hostName* (former Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*). 
   * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously.
   * *sheetId* should remain the same as before.
@@ -126,7 +126,7 @@ If otherwise you need to embed new content (new visualizations or new sheets) vi
   <iframe src="https://{hostName}/sense/app/{appid}/sheet/{sheetid}/state/analysis" style="border:none;width:100%;height:100%;"></iframe>
 ```
 
-  ##### Single Sheet (Single Integration APIs)
+##### Single Sheet (Single Integration APIs)
 You can integrate single Qlik Sense visualizations, sheets or snapshots into an iframe. You use the Single Integration API to define how the object should be integrated into your web site.
   * Just replace your old *hostName* (former Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*). 
   * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously.
@@ -135,7 +135,7 @@ You can integrate single Qlik Sense visualizations, sheets or snapshots into an 
 ```html
 <iframe src="https://{hostName}/single/?appid={appId}&sheet={sheetid}&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"></iframe>
 ```  
-  ##### Single Object (Single Integration APIs)
+##### Single Object (Single Integration APIs)
   * Replace your old *hostName* (old Qlik Sense Enterprise on Windows server name) with the new Qlik Cloud tenant name and region (e.g. *your-tenant.eu.qlikcloud.com*).
   * Replace your former *appId* on Qlik Sense on Windows environment with the new appId your tenant assigned to the app you've imported previously. 
   * *objectId* should remain the same as before.
