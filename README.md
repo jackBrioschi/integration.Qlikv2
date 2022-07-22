@@ -71,7 +71,6 @@ When a web server shares a resource such as an image on its own server, it is fo
 The resources location must also be updated
 
 
-
 Of course, as your Qlik applications are now hosting in a new Qlik Sense site, the Application should also be changed...
 
 All these kind of change are detailed below!
