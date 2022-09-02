@@ -8,7 +8,7 @@ As data-driven decision making is becoming more and more a key part of organizat
 *Embedded analytics* seamlessly integrate analytic capabilities and content into business applications, products, websites or portals. It lets users quickly access relevant data and insights in their daily workflows without slowing down and switching to use a separate analytics application. This makes it easier for organizations to empower employees, customers, suppliers and partners with the information they need right where they work to answer questions, make better decisions and take actions faster. Please visit [Qlik Embedded Analytics](https://www.qlik.com/us/bi/embedded-analytics)
 
 ### Introduction to Web Integration
-Unlike other Business Intelligence and Analytics Platforms on the market that start out as BI platforms and become endpoints within a data project, Qlik wants to ensure that what
+Unlike other Business Intelligence and Analytics Platforms on the market that start out as BI platforms and become endpoints within a data pipeline, Qlik wants to ensure that what
 is created inside the *Qlik Active Intelligence Platform*, does not remain bounded and accessible only within it but can be embedded
 in a single platform entry-point which corporate decision-making processes take place.
 
