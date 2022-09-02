@@ -72,7 +72,7 @@ To obtain the results described above, for a web-integration project with Qlik w
 
 ![image](https://user-images.githubusercontent.com/61158347/188104671-b70edb87-cb5c-44db-8ed2-96955af63139.png)
 
-##### How does it work?
+#### How does it work?
 
 **Enigma.js** is an open source library, developed on GitHub that helps you to communicate with the Qlik associative engine. You can use it as a wrapper to connect to Qlik Associative Engine and by using [QIX api](https://qlik.dev/apis/json-rpc/qix#docs) methods. The enigma.js library can be used as an SDK or to do CRUD (that is create, read, update and delete) operations on apps and on app entities, in our case we can retrieve an app, the objects of an app and the hypercubes that will be rendered using Nebula.js
 To use enigma.js, you should be familiar with JavaScript, promises, websockets, and open source libraries. You will need Node.js. Since enigma.js implements the methods of the Qlik Engine JSON API so you should be familiar with referencing the [Qlik Engine JSON API](https://qlik.dev/apis/json-rpc/qix#docs). 
@@ -83,7 +83,7 @@ To use nebula.js, you should be familiar with JavaScript, promises, websockets, 
 To understand how the integration works we have several tutorials online. Here you can find some useful link:
 * [Build a simple mashup using Nebula.js](https://qlik.dev/tutorials/build-a-simple-mashup-using-nebulajs)
 
-##### When to use it/when not to use it?
+#### When to use it/when not to use it?
 With this type of integration we can satisfy any level of integration complexity from the *Div-Tag* level, to *On-the fly* to *Data Only*. Firstly it should be noted that unlike Capability Apis, with Nebula.js, being framework agnostic, we are free from any dependence with external frameworks. 
 You can use it when you typically have a viewing scenario where you don't have to develop from the html page the user is in and want to embed Qlik into a pre-existing HTML page. Not only that, with the javascript api it is possible to interact with the Sense engine by applying selections rather than actions based on the web components of the html page external to the Sense server itself. Let's think, for example, of a button rather than a dropdown menu natively present within your portal. When the user makes a selection of an item from the dropdown menu, you could trigger a call to the Qlik engine that applies a data selection in the application based on the value selected by the user.
 
@@ -91,9 +91,9 @@ Since Nebula is an ever-developing library and new visualizations, features and 
    
    #### Capability APIs
    description
-   ##### How does it work?
+   #### How does it work?
    tbd
-   ##### When to use it/when not to use it? 
+   #### When to use it/when not to use it? 
    
    
   
