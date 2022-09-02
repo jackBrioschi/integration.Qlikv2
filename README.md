@@ -10,7 +10,7 @@ As data-driven decision making is becoming more and more a key part of organizat
 ### Introduction to Web Integration
 Unlike other Business Intelligence and Analytics Platforms on the market that start out as BI platforms and become endpoints within a data pipeline, Qlik wants to ensure that what
 is created inside the *Qlik Active Intelligence Platform*, does not remain bounded and accessible only within it but can be embedded
-in a single platform entry-point which corporate decision-making processes take place.
+in a single entry-point solution where corporate decision-making processes take place.
 
 Hence, if we create a data model together with data visualization layer in Qlik, this by default will be accessible on the dedicated Qlik Sense SaaS tenant but can also be embedded within portals, business solutions or services that an ISV delivers to its end customers.
 
