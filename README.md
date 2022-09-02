@@ -83,7 +83,9 @@ To use nebula.js, you should be familiar with JavaScript, promises, websockets, 
 To understand how the integration works we have several tutorials online. Here you can find some useful link:
 * [Build a simple mashup using Nebula.js](https://qlik.dev/tutorials/build-a-simple-mashup-using-nebulajs)
 
-   ##### When to use it/when not to use it?
+##### When to use it/when not to use it?
+With this type of integration we can satisfy any level of integration complexity from the *Div-Tag* level, to *On-the fly* to *Data Only*. Firstly it should be noted that unlike Capability Apis, with Nebula.js, being framework agnostic, we are free from any dependence with external frameworks. 
+You can use it when you typically have a viewing scenario where you don't have to develop from the html page the user is in and want to embed Qlik into a pre-existing HTML page. Not only that, with the javascript api it is possible to interact with the Sense engine by applying selections rather than actions based on the web components of the html page external to the Sense server itself. Let's think, for example, of a button rather than a dropdown menu natively present within your portal. When the user makes a selection of an item from the dropdown menu, you could trigger a call to the Qlik engine that applies a data selection in the application based on the value selected by the user.
    
    #### Capability APIs
    description
