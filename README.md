@@ -1,7 +1,3 @@
-# integration.Qlikv2
-This is a repo to share the work Giacomo and Baptiste are doing in relation to create a SaaS version of integration.Qlik.com
-
-
 ## What's the value of Embedded Analytics?
 As data-driven decision making is becoming more and more a key part of organizations, having embedded analytics in the core applications that business people use on a regular basis becomes critical to being able to take full advantage from the data assets.
 
