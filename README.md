@@ -87,11 +87,16 @@ To understand how the integration works we have several tutorials online. Here y
 * Unlike Capability Apis, with Nebula.js, being framework agnostic, we are free from any dependence with external frameworks that makes life easier when dealing with integration projects.
 * Since Nebula is an ever-developing library and new visualizations, features and objects are continuously released, I always recommend checking component availability based on your integration needs, as well as contacting your local Qlik presales for information on the roadmap. Please you can find the documentation of what is available at this [inventory section](https://qlik.dev/libraries-and-tools/visualizations/inventory) on the Online Help.
    
-   #### Capability APIs
-   description
-   #### How does it work?
-   tbd
-   #### When to use it/when not to use it? 
+#### Capability APIs
+
+Need to go further than Iframe integration?
+
+The Capability APIs are a collection of JavaScript APIs that allows you to easily embed Qlik Sense content into a web page, and interact with data. 
+
+However, if you plan on using capability APIs to build custom visualizations, mashups, or extensions, consider using the nebula.js open-source library available on NPM instead. nebula.js is a collection of JavaScript libraries, visualizations, and CLIs that helps developers build and integrate visualizations on top of Qlik's Associative Engine.
+
+You already have a mashup based on capabilities API? No worries, it is always fully compatible. Take a look to our Embedded Analytics migration page betwen Qlik Sense Client Managed and Qlik Cloud
+
    
    
   
