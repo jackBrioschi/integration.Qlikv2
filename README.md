@@ -99,7 +99,18 @@ You already have a mashup based on capabilities API? No worries, it is always fu
 
    
 ### Qlik Cloud offers more than just embedded analytics
-Prior to the advent of Qlik Cloud, Qlik's Web Integration was totally focused on providing users with the ability to embed analytics developed within Qlik Sense dashboards.
+Prior to the advent of Qlik Cloud, Qlik's Web Integration was totally focused on providing users with the ability to embed analytics developed within Qlik Sense dashboards. Now the music has changed as a series of Advanced Analytics features have been developed within Qlik Cloud that enrich the user's decision-making capacity, which can easily be embedded within your solutions.
+
+* **Data Alerts**: Just think of data-based alerts where following a statistical condition that occurs on the data, notifications are sent via popup messages or emails to users to inform them of what has happened. 
+    * [Online Doc](https://qlik.dev/apis/rest/data-alerts)
+* **Natural Language Processing**: Qlik Cloud, among the value-added products, provides *Insight Advisor Chat*, a chatbot that can be interrogated in natural language that has the task of making the user communicate with the Qlik cognitive engine that always returns insights as well as the information he needs that increases its ability to interpret the data. A set of APIs to communicate with Qlik Cognitive Engine via NLP is now available and can be used to build your custom solutions that embed Qlik Natural Language capabilities.
+    * [Online Doc](https://qlik.dev/apis/rest/natural-language)
+    * [Build your own ChatBot](https://qlik.dev/tutorials/build-a-chatbot-using-the-qlik-sense-natural-language-api)
+* **Qlik Application Automation**: Qlik Application Automation provides a no-code visual interface that helps you easily build automated analytics and data workflows. An automation is a sequence of actions and triggers that runs like a program. It can be a simple workflow that collects information from one application and passes it to another, or it can be an end-to-end pipeline that takes you from raw data to active intelligence. Automations let you automate your analytics environment, create data-driven workflows, and embed data and analytics into your business processes thanks to the APIs that are now available to integrate it into your decision-making processes.
+    * [Online Doc]:(https://qlik.dev/apis/rest/automations)
+
+* **Qlik AutoML**:Qlik AutoML is a platform for generating automated machine learning models and delivering them as predictive endpoints. This solution allows you to send data to specific predictive endpoints and returns forecasts which are loaded inside your Web Application or in the Qlik Sense apps embedded in your portal.
+    
   
  
 
