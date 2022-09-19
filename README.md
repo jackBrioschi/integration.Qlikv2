@@ -78,7 +78,8 @@ To use enigma.js, you should be familiar with JavaScript, promises, websockets, 
 To use nebula.js, you should be familiar with JavaScript, promises, websockets, and open source libraries. You will need Node.js and access to the Qlik associative engine through Enigma.js. Knowledge of Qlik concepts such as generic objects and hypercubes would also be helpful.
 
 To understand how the integration works we have several tutorials online. Here you can find some useful link:
-* [Build a simple mashup using Nebula.js](https://qlik.dev/tutorials/build-a-simple-mashup-using-nebulajs)
+* [Build a simple mashup using Nebula.js](https://qlik.dev/tutorials/build-a-simple-mashup-using-nebulajs
+* [Live examples of Nebula.js charts](https://glitch.com/@Qlik-Nebulajs) that can be re-used and modified
 
 #### When to use it/when not to use it?
 * With this type of integration we can satisfy any level of integration complexity from the *Div-Tag* level, to *On-the fly* to *Data Only*.
