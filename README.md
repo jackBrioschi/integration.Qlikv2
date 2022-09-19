@@ -98,7 +98,8 @@ However, if you plan on using capability APIs to build custom visualizations, ma
 You already have a mashup based on capabilities API? No worries, it is always fully compatible. Take a look to our Embedded Analytics migration page betwen Qlik Sense Client Managed and Qlik Cloud
 
    
-   
+### Qlik Cloud offers more than just embedded analytics
+Prior to the advent of Qlik Cloud, Qlik's Web Integration was totally focused on providing users with the ability to embed analytics developed within Qlik Sense dashboards.
   
  
 
