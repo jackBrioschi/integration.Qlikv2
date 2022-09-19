@@ -99,7 +99,7 @@ You already have a mashup based on capabilities API? No worries, it is always fu
 
    
 ### Qlik Cloud offers more than just embedded analytics
-Prior to the advent of Qlik Cloud, Qlik's Web Integration was totally focused on providing users with the ability to embed analytics developed within Qlik Sense dashboards. Now the music has changed as a series of Advanced Analytics features have been developed within Qlik Cloud that enrich the user's decision-making capacity, which can easily be embedded within your solutions.
+Prior to the advent of Qlik Cloud, Qlik's Web Integration was totally focused on providing users with the ability to embed analytics developed within Qlik Sense dashboards. Now the music has changed as a series of Advanced Analytics features have been developed within Qlik Cloud that enrich the user's decision-making capacity, which can easily be integrated within your solutions.
 
 * **Data Alerts**: Just think of data-based alerts where following a statistical condition that occurs on the data, notifications are sent via popup messages or emails to users to inform them of what has happened. 
     * [Online Doc](https://qlik.dev/apis/rest/data-alerts)
