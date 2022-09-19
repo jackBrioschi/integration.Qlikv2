@@ -107,7 +107,7 @@ Prior to the advent of Qlik Cloud, Qlik's Web Integration was totally focused on
     * [Online Doc](https://qlik.dev/apis/rest/natural-language)
     * [Build your own ChatBot](https://qlik.dev/tutorials/build-a-chatbot-using-the-qlik-sense-natural-language-api)
 * **Qlik Application Automation**: Qlik Application Automation provides a no-code visual interface that helps you easily build automated analytics and data workflows. An automation is a sequence of actions and triggers that runs like a program. It can be a simple workflow that collects information from one application and passes it to another, or it can be an end-to-end pipeline that takes you from raw data to active intelligence. Automations let you automate your analytics environment, create data-driven workflows, and embed data and analytics into your business processes thanks to the APIs that are now available to integrate it into your decision-making processes.
-    * [Online Doc]:(https://qlik.dev/apis/rest/automations)
+    * [Online Doc](https://qlik.dev/apis/rest/automations)
 
 * **Qlik AutoML**:Qlik AutoML is a platform for generating automated machine learning models and delivering them as predictive endpoints. This solution allows you to send data to specific predictive endpoints and returns forecasts which are loaded inside your Web Application or in the Qlik Sense apps embedded in your portal.
     
