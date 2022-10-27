@@ -55,6 +55,7 @@ For simple use case with a static web-site mashup, a common storage provider can
 
 Here some examples on different cloud providers
 > **Warning : These tutorials make content available to the public internet. Please adapt the security regarding your use cases.**
+
 - [Hosting a static website on AWS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
 - [Hosting a static website on Azure](https://azure.microsoft.com/fr-fr/blog/static-websites-on-azure-storage-now-generally-available/)
 - [Hosting a static website on Google Cloud Platform](https://cloud.google.com/storage/docs/hosting-static-website)
