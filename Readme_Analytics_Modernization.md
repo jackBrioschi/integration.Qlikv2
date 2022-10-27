@@ -103,7 +103,7 @@ When not use it :
 Modern Embedded Analytics solutions using Qlik offers a stack of open-source libraries to build customized analytical platforms backed up with the robustness of Qlik’s Associative Engine. Historically, Capability APIs have been extensively used to build mashups and perform application related operations. A more modern alternative offering to Capability API-based operations is [Nebula.js](https://qlik.dev/libraries-and-tools/nebulajs) and [Enigma.js](https://qlik.dev/libraries-and-tools/enigmajs).
 
 ![image](https://user-images.githubusercontent.com/61158347/188104671-b70edb87-cb5c-44db-8ed2-96955af63139.png) 
-*(Image Author: Dipankar Mazumdar. source: [qlik-community-article](https://community.qlik.com/t5/Design/Dealing-with-variables-in-a-Mashup-using-Nebula-js-amp-Enigma-js/ba-p/1801289)*
+*(Image Author: Dipankar Mazumdar. source: [qlik-community-article](https://community.qlik.com/t5/Design/Dealing-with-variables-in-a-Mashup-using-Nebula-js-amp-Enigma-js/ba-p/1801289) )*
 
 #### How does it work?
 
